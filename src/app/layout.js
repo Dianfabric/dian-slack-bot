@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Dian Slack Bot',
-  description: 'Dian Fabric Slack Bot',
+  title: 'Dian Bot',
+  description: 'Dian Fabric Slack Bot API',
 };
 
 export default function RootLayout({ children }) {
