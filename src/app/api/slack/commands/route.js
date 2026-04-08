@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { waitUntil } from '@vercel/functions';
-import { verifySlackRequest, sendSlackMessage } from '@/lib/slack';
+import { verifySlackRequest, sendBotReply, sendSlackMessage, getChannelHistory, buildConversationContext } from '@/lib/slack';
 import { getSheetTabs, readSheet } from '@/lib/sheets';
 import { askDianBot } from '@/lib/ai';
 
@@ -69,21 +69,20 @@ export async function POST(request) {
 
 async function handleInventory(query, channel) {
   try {
-    let context = '';
-    if (process.env.SHEET_ID_INVENTORY) {
-      console.log('[재고] Reading inventory sheet...');
-      context = await readAllSheetData(process.env.SHEET_ID_INVENTORY);
-      console.log('[재고] Sheet data length:', context.length);
-    } else {
-      console.warn('[재고] SHEET_ID_INVENTORY not set');
-    }
+    const [sheetContext, history] = await Promise.all([
+      process.env.SHEET_ID_INVENTORY
+        ? readAllSheetData(process.env.SHEET_ID_INVENTORY).then(d => { console.log('[재고] Sheet data length:', d.length); return d; })
+        : Promise.resolve(''),
+      getChannelHistory(channel).then(msgs => buildConversationContext(msgs)),
+    ]);
+    const context = history + sheetContext;
     const prompt = query
       ? `"${query}" 원단의 재고 현황을 알려줘. 수량, 컬러, 위치 정보를 포함해서.`
       : '전체 재고 현황을 카테고리별로 요약해줘.';
     console.log('[재고] Asking AI...');
     const answer = await askDianBot(prompt, context);
     console.log('[재고] AI response length:', answer.length);
-    await sendSlackMessage(channel, answer);
+    await sendBotReply(channel, query || '전체 재고 조회', answer);
   } catch (error) {
     console.error('[재고] Error:', error.message, error.stack);
     try {
@@ -96,21 +95,20 @@ async function handleInventory(query, channel) {
 
 async function handleOrder(query, channel) {
   try {
-    let context = '';
-    if (process.env.SHEET_ID_ORDERS) {
-      console.log('[주문] Reading orders sheet...');
-      context = await readAllSheetData(process.env.SHEET_ID_ORDERS);
-      console.log('[주문] Sheet data length:', context.length);
-    } else {
-      console.warn('[주문] SHEET_ID_ORDERS not set');
-    }
+    const [sheetContext, history] = await Promise.all([
+      process.env.SHEET_ID_ORDERS
+        ? readAllSheetData(process.env.SHEET_ID_ORDERS).then(d => { console.log('[주문] Sheet data length:', d.length); return d; })
+        : Promise.resolve(''),
+      getChannelHistory(channel).then(msgs => buildConversationContext(msgs)),
+    ]);
+    const context = history + sheetContext;
     const prompt = query
       ? `"${query}" 관련 주문 내역을 조회해줘.`
       : '최근 주문 현황을 요약해줘. 진행 중인 주문 위주로.';
     console.log('[주문] Asking AI...');
     const answer = await askDianBot(prompt, context);
     console.log('[주문] AI response length:', answer.length);
-    await sendSlackMessage(channel, answer);
+    await sendBotReply(channel, query || '전체 주문 조회', answer);
   } catch (error) {
     console.error('[주문] Error:', error.message, error.stack);
     try {
@@ -123,25 +121,24 @@ async function handleOrder(query, channel) {
 
 async function handleQuote(query, channel) {
   try {
-    let context = '';
-    if (process.env.SHEET_ID_PRICING) {
-      console.log('[견적] Reading pricing sheet...');
-      context = await readAllSheetData(process.env.SHEET_ID_PRICING);
-      console.log('[견적] Pricing data length:', context.length);
-    }
-    if (process.env.SHEET_ID_INVENTORY) {
-      console.log('[견적] Reading inventory sheet...');
-      const invData = await readAllSheetData(process.env.SHEET_ID_INVENTORY);
-      context += invData;
-      console.log('[견적] Total context length:', context.length);
-    }
+    const [pricingData, inventoryData, history] = await Promise.all([
+      process.env.SHEET_ID_PRICING
+        ? readAllSheetData(process.env.SHEET_ID_PRICING).then(d => { console.log('[견적] Pricing data length:', d.length); return d; })
+        : Promise.resolve(''),
+      process.env.SHEET_ID_INVENTORY
+        ? readAllSheetData(process.env.SHEET_ID_INVENTORY).then(d => { console.log('[견적] Inventory data length:', d.length); return d; })
+        : Promise.resolve(''),
+      getChannelHistory(channel).then(msgs => buildConversationContext(msgs)),
+    ]);
+    const context = history + pricingData + inventoryData;
+    console.log('[견적] Total context length:', context.length);
     const prompt = query
       ? `다음 내용으로 견적을 산출해줘: ${query}. 원단명, 수량, 단가, 합계를 정리해서 보여줘.`
       : '견적 작성을 위해 어떤 정보가 필요한지 안내해줘. (예: /견적 A사 Boucle Ivory 50m)';
     console.log('[견적] Asking AI...');
     const answer = await askDianBot(prompt, context);
     console.log('[견적] AI response length:', answer.length);
-    await sendSlackMessage(channel, answer);
+    await sendBotReply(channel, query || '견적 안내', answer);
   } catch (error) {
     console.error('[견적] Error:', error.message, error.stack);
     try {
@@ -154,28 +151,26 @@ async function handleQuote(query, channel) {
 
 async function handleGeneral(query, channel) {
   try {
-    let context = '';
-    const sheetConfigs = [
-      { id: process.env.SHEET_ID_INVENTORY, label: '재고' },
-      { id: process.env.SHEET_ID_ORDERS, label: '주문' },
-      { id: process.env.SHEET_ID_PRICING, label: '단가' },
-    ];
-    for (const config of sheetConfigs) {
-      if (config.id) {
-        try {
-          console.log(`[디안] Reading ${config.label} sheet...`);
-          const data = await readAllSheetData(config.id);
-          context += data;
-        } catch (e) {
-          console.error(`[디안] ${config.label} sheet read fail:`, e.message);
-        }
-      }
-    }
+    const sheetIds = [
+      process.env.SHEET_ID_INVENTORY,
+      process.env.SHEET_ID_ORDERS,
+      process.env.SHEET_ID_PRICING,
+    ].filter(Boolean);
+
+    const [history, ...sheetResults] = await Promise.all([
+      getChannelHistory(channel).then(msgs => buildConversationContext(msgs)),
+      ...sheetIds.map(id => readAllSheetData(id).catch(e => {
+        console.error(`[디안] sheet read fail:`, e.message);
+        return '';
+      })),
+    ]);
+
+    const context = history + sheetResults.join('');
     console.log('[디안] Total context length:', context.length);
     console.log('[디안] Asking AI...');
     const answer = await askDianBot(query || '안녕! 디안봇이 뭘 도와줄 수 있는지 알려줘.', context);
     console.log('[디안] AI response length:', answer.length);
-    await sendSlackMessage(channel, answer);
+    await sendBotReply(channel, query || '안녕', answer);
   } catch (error) {
     console.error('[디안] Error:', error.message, error.stack);
     try {

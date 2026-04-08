@@ -52,6 +52,52 @@ export async function sendSlackMessage(channel, text, blocks = null) {
   return data;
 }
 
+/**
+ * 질문과 답변을 함께 포맷하여 채널에 전송
+ */
+export async function sendBotReply(channel, question, answer) {
+  const formatted = `> 💬 *${question}*\n\n${answer}`;
+  return sendSlackMessage(channel, formatted);
+}
+
+/**
+ * 채널의 최근 대화 히스토리 가져오기
+ */
+export async function getChannelHistory(channel, limit = 10) {
+  const res = await fetch(`https://slack.com/api/conversations.history?channel=${channel}&limit=${limit}`, {
+    headers: {
+      'Authorization': `Bearer ${process.env.SLACK_BOT_TOKEN}`,
+    },
+  });
+  const data = await res.json();
+  if (!data.ok) {
+    console.error('[Slack] History Error:', data.error);
+    return [];
+  }
+  return data.messages || [];
+}
+
+/**
+ * 최근 대화에서 Q&A 쌍을 추출하여 대화 맥락 문자열로 변환
+ */
+export function buildConversationContext(messages) {
+  const qaPairs = [];
+  for (const msg of messages.reverse()) {
+    if (msg.bot_id && msg.text) {
+      const match = msg.text.match(/^>\s*💬\s*\*(.+?)\*\n\n([\s\S]+)$/);
+      if (match) {
+        qaPairs.push({ question: match[1], answer: match[2] });
+      }
+    }
+  }
+  if (qaPairs.length === 0) return '';
+  const history = qaPairs
+    .slice(-5)
+    .map(qa => `사용자: ${qa.question}\n디안봇: ${qa.answer}`)
+    .join('\n\n');
+  return `[이전 대화]\n${history}\n\n`;
+}
+
 export function fabricInfoBlock(fabricName, details) {
   return [
     { type: 'header', text: { type: 'plain_text', text: `🧵 ${fabricName}`, emoji: true } },
