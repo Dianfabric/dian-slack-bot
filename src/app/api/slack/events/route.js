@@ -4,23 +4,30 @@ import { verifySlackRequest, sendSlackMessage } from '@/lib/slack';
 import { askDianBot } from '@/lib/ai';
 import { getSheetTabs, readSheet } from '@/lib/sheets';
 
+export const maxDuration = 60;
+
 /**
  * 스프레드시트의 모든 탭 데이터를 자동으로 읽어오기
+ * 최근 6개 탭만 읽어서 타임아웃 방지
  */
 async function readAllSheetData(spreadsheetId) {
   const tabs = await getSheetTabs(spreadsheetId);
-  let allData = '';
-  for (const tab of tabs) {
-    try {
-      const data = await readSheet(spreadsheetId, `${tab}!A1:Z200`);
-      if (data.length > 0) {
-        allData += `[${tab}]\n` + data.map(row => row.join(' | ')).join('\n') + '\n\n';
+  const recentTabs = tabs.slice(-6);
+  console.log('[Sheets] Found tabs:', tabs.length, '| Reading recent:', recentTabs);
+  const results = await Promise.all(
+    recentTabs.map(async (tab) => {
+      try {
+        const data = await readSheet(spreadsheetId, `${tab}!A1:Z200`);
+        if (data.length > 0) {
+          return `[${tab}]\n` + data.map(row => row.join(' | ')).join('\n') + '\n\n';
+        }
+      } catch (e) {
+        console.error(`[Sheets] tab "${tab}" read fail:`, e.message);
       }
-    } catch (e) {
-      console.error(`[Sheets] tab "${tab}" read fail:`, e.message);
-    }
-  }
-  return allData;
+      return '';
+    })
+  );
+  return results.join('');
 }
 
 export async function POST(request) {
