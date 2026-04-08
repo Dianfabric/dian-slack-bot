@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 import { waitUntil } from '@vercel/functions';
-import { verifySlackRequest, sendSlackMessage } from '@/lib/slack';
+import { verifySlackRequest, sendBotReply, sendSlackMessage, getChannelHistory, buildConversationContext } from '@/lib/slack';
 import { askDianBot } from '@/lib/ai';
 import { getSheetTabs, readSheet } from '@/lib/sheets';
 
 export const maxDuration = 60;
+
+const DIANBOT_CHANNEL_ID = process.env.DIANBOT_CHANNEL_ID || '';
 
 /**
  * 스프레드시트의 모든 탭 데이터를 자동으로 읽어오기
@@ -47,11 +49,21 @@ export async function POST(request) {
 
   if (payload.type === 'event_callback') {
     const event = payload.event;
-    if (event.bot_id) {
+
+    // 봇 자신의 메시지는 무시
+    if (event.bot_id || event.subtype === 'bot_message') {
       return NextResponse.json({ ok: true });
     }
+
+    // @멘션 이벤트
     if (event.type === 'app_mention') {
-      waitUntil(handleMention(event));
+      waitUntil(handleMessage(event));
+      return NextResponse.json({ ok: true });
+    }
+
+    // dianbot 채널에서의 일반 메시지 → 슬래시 없이 자동 응답
+    if (event.type === 'message' && event.channel === DIANBOT_CHANNEL_ID) {
+      waitUntil(handleMessage(event));
       return NextResponse.json({ ok: true });
     }
   }
@@ -59,53 +71,50 @@ export async function POST(request) {
   return NextResponse.json({ ok: true });
 }
 
-async function handleMention(event) {
+async function handleMessage(event) {
   const userMessage = event.text.replace(/<@[A-Z0-9]+>/g, '').trim();
   const channel = event.channel;
 
+  if (!userMessage) return;
+
+  console.log(`[Event] message: "${userMessage}" in channel:${channel}`);
+
   try {
-    let context = '';
+    // 시트 데이터 + 대화 히스토리를 병렬로 가져오기
+    const sheetIds = [];
     const inventoryKeywords = ['재고', '수량', '입고', '남은', '있어', '몇'];
     const orderKeywords = ['주문', '견적', '오더', '발주'];
     const priceKeywords = ['단가', '가격', '얼마', '비용', '원'];
 
-    if (inventoryKeywords.some(kw => userMessage.includes(kw)) && process.env.SHEET_ID_INVENTORY) {
-      try {
-        const data = await readAllSheetData(process.env.SHEET_ID_INVENTORY);
-        if (data.length > 0) {
-          context += '[재고 시트 데이터]\n' + data + '\n\n';
-        }
-      } catch (e) {
-        console.error('재고 시트 읽기 실패:', e.message);
-      }
+    // dianbot 채널이면 항상 전체 시트 참조, 아니면 키워드 기반
+    const isDianbotChannel = channel === DIANBOT_CHANNEL_ID;
+
+    if ((isDianbotChannel || inventoryKeywords.some(kw => userMessage.includes(kw))) && process.env.SHEET_ID_INVENTORY) {
+      sheetIds.push(process.env.SHEET_ID_INVENTORY);
+    }
+    if ((isDianbotChannel || orderKeywords.some(kw => userMessage.includes(kw))) && process.env.SHEET_ID_ORDERS) {
+      sheetIds.push(process.env.SHEET_ID_ORDERS);
+    }
+    if ((isDianbotChannel || priceKeywords.some(kw => userMessage.includes(kw))) && process.env.SHEET_ID_PRICING) {
+      sheetIds.push(process.env.SHEET_ID_PRICING);
     }
 
-    if (orderKeywords.some(kw => userMessage.includes(kw)) && process.env.SHEET_ID_ORDERS) {
-      try {
-        const data = await readAllSheetData(process.env.SHEET_ID_ORDERS);
-        if (data.length > 0) {
-          context += '[주문 시트 데이터]\n' + data + '\n\n';
-        }
-      } catch (e) {
-        console.error('주문 시트 읽기 실패:', e.message);
-      }
-    }
+    const [history, ...sheetResults] = await Promise.all([
+      getChannelHistory(channel).then(msgs => buildConversationContext(msgs)),
+      ...sheetIds.map(id => readAllSheetData(id).catch(e => {
+        console.error('[Event] sheet read fail:', e.message);
+        return '';
+      })),
+    ]);
 
-    if (priceKeywords.some(kw => userMessage.includes(kw)) && process.env.SHEET_ID_PRICING) {
-      try {
-        const data = await readAllSheetData(process.env.SHEET_ID_PRICING);
-        if (data.length > 0) {
-          context += '[단가 시트 데이터]\n' + data + '\n\n';
-        }
-      } catch (e) {
-        console.error('단가 시트 읽기 실패:', e.message);
-      }
-    }
+    const context = history + sheetResults.join('');
+    console.log('[Event] Context length:', context.length);
 
     const answer = await askDianBot(userMessage, context);
-    await sendSlackMessage(channel, answer);
+    console.log('[Event] AI response length:', answer.length);
+    await sendBotReply(channel, userMessage, answer);
   } catch (error) {
-    console.error('멘션 처리 오류:', error);
+    console.error('[Event] Error:', error.message, error.stack);
     await sendSlackMessage(channel, '죄송합니다. 요청을 처리하는 중 오류가 발생했습니다.');
   }
 }
