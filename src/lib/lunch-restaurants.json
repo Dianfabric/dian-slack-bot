@@ -1,0 +1,3369 @@
+[
+  {
+    "name": "강남쌀국수",
+    "category": "아시아음식",
+    "note": "베트남음식",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/496373194"
+  },
+  {
+    "name": "학동오뎅",
+    "category": "음식점",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/1572857487"
+  },
+  {
+    "name": "바다양푼이동태탕 강남논현점",
+    "category": "한식",
+    "note": "바다양푼이동태탕",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/17944368"
+  },
+  {
+    "name": "소주물 학동역점",
+    "category": "한식",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/532588425"
+  },
+  {
+    "name": "오늘고래",
+    "category": "일식",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/2016508167"
+  },
+  {
+    "name": "함께하는밥상 Spoon10",
+    "category": "뷔페",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/1241917773"
+  },
+  {
+    "name": "학동부대",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/1212472221"
+  },
+  {
+    "name": "깐부치킨 학동역점",
+    "category": "치킨",
+    "note": "깐부치킨",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/12887324"
+  },
+  {
+    "name": "엠제이부대찌개",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/654720972"
+  },
+  {
+    "name": "치킨더비 학동역점",
+    "category": "치킨",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/137273963"
+  },
+  {
+    "name": "고래잡아먹은낙지",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/27514811"
+  },
+  {
+    "name": "논현빈대떡",
+    "category": "한식",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/16878382"
+  },
+  {
+    "name": "우화 학동본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/297520115"
+  },
+  {
+    "name": "덕수궁해물칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/16849400"
+  },
+  {
+    "name": "명동칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/12049260"
+  },
+  {
+    "name": "곰작골나주곰탕 학동점",
+    "category": "한식",
+    "note": "곰작골나주곰탕",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/25810813"
+  },
+  {
+    "name": "롯데리아 학동역점",
+    "category": "패스트푸드",
+    "note": "롯데리아",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/21852012"
+  },
+  {
+    "name": "김밥다옴 학동역본점",
+    "category": "분식",
+    "note": "",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/27244736"
+  },
+  {
+    "name": "KFC 학동역2점",
+    "category": "패스트푸드",
+    "note": "KFC",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/15101805"
+  },
+  {
+    "name": "세종한우 학동역점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/13102233"
+  },
+  {
+    "name": "정육식당",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/974062181"
+  },
+  {
+    "name": "맘스피자 학동역점",
+    "category": "양식",
+    "note": "맘스피자",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/260776667"
+  },
+  {
+    "name": "맘스터치LAB 학동역점",
+    "category": "패스트푸드",
+    "note": "맘스터치",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/1860193066"
+  },
+  {
+    "name": "스시사인조",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/1957463183"
+  },
+  {
+    "name": "학동집",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 1,
+    "map": "http://place.map.kakao.com/64715969"
+  },
+  {
+    "name": "해장왕양평해장국 강남학동역본점",
+    "category": "한식",
+    "note": "해장국",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/1904878006"
+  },
+  {
+    "name": "찌개마을시골촌",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/36013228"
+  },
+  {
+    "name": "동천홍 학동점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/17377605"
+  },
+  {
+    "name": "그림나베 학동역점",
+    "category": "일식",
+    "note": "",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/57329074"
+  },
+  {
+    "name": "학동수제비",
+    "category": "한식",
+    "note": "수제비",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/1586018808"
+  },
+  {
+    "name": "솔밤",
+    "category": "양식",
+    "note": "",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/2007100531"
+  },
+  {
+    "name": "죠야 서울",
+    "category": "양식",
+    "note": "",
+    "walk": 2,
+    "map": "http://place.map.kakao.com/427978985"
+  },
+  {
+    "name": "이태리부대찌개 학동점",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/2050520033"
+  },
+  {
+    "name": "사랑채",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/29355657"
+  },
+  {
+    "name": "메이크어딜리버리",
+    "category": "한식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1764760226"
+  },
+  {
+    "name": "옥수동묵은지김치찜 강남점",
+    "category": "한식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1480812009"
+  },
+  {
+    "name": "밥스토랑 버디버디스크린골프 논현동점",
+    "category": "한식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1015011775"
+  },
+  {
+    "name": "오오키",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/82015540"
+  },
+  {
+    "name": "김밥친구들",
+    "category": "분식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1800775593"
+  },
+  {
+    "name": "허당맛선생",
+    "category": "한식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1676323155"
+  },
+  {
+    "name": "미야기",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/592867083"
+  },
+  {
+    "name": "논현감자탕",
+    "category": "한식",
+    "note": "감자탕",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/893729744"
+  },
+  {
+    "name": "피자알볼로 강남논현점",
+    "category": "양식",
+    "note": "피자알볼로",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/444925569"
+  },
+  {
+    "name": "가마솥순대국밥 학동역점",
+    "category": "한식",
+    "note": "가마솥순대국밥",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/169705122"
+  },
+  {
+    "name": "제주흙돼지손큰쭈꾸미",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/16036561"
+  },
+  {
+    "name": "난랑",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1806203674"
+  },
+  {
+    "name": "BBQ 학동점",
+    "category": "치킨",
+    "note": "BBQ",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/484837125"
+  },
+  {
+    "name": "김랩",
+    "category": "분식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/137071916"
+  },
+  {
+    "name": "찐 낙곱새 곱도리탕",
+    "category": "한식",
+    "note": "곱창,막창",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1717884270"
+  },
+  {
+    "name": "완도상회전복통닭",
+    "category": "치킨",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/651774785"
+  },
+  {
+    "name": "성북동서울왕돈까스 논현동지점",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/16057894"
+  },
+  {
+    "name": "진전복삼계탕 본점",
+    "category": "한식",
+    "note": "삼계탕",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/445430353"
+  },
+  {
+    "name": "코마츠",
+    "category": "일식",
+    "note": "일본식라면",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/763539774"
+  },
+  {
+    "name": "하남돼지집 학동역점",
+    "category": "한식",
+    "note": "하남돼지집",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/465786662"
+  },
+  {
+    "name": "물고기자리",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/7875394"
+  },
+  {
+    "name": "단스시 논현본점",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/8306074"
+  },
+  {
+    "name": "명동칼국수샤브샤브 학동역점",
+    "category": "샤브샤브",
+    "note": "명동칼국수샤브샤브",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/16559847"
+  },
+  {
+    "name": "뷔페 패밀리아 임피리얼 팰리스",
+    "category": "뷔페",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/813366881"
+  },
+  {
+    "name": "망고",
+    "category": "양식",
+    "note": "",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1020464998"
+  },
+  {
+    "name": "오스테리아 루치아",
+    "category": "양식",
+    "note": "이탈리안",
+    "walk": 3,
+    "map": "http://place.map.kakao.com/1070316744"
+  },
+  {
+    "name": "대가연 강남본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/218440385"
+  },
+  {
+    "name": "진대감 논현본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/10082619"
+  },
+  {
+    "name": "해랑식당",
+    "category": "한식",
+    "note": "",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/16646317"
+  },
+  {
+    "name": "엔유",
+    "category": "양식",
+    "note": "",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/24578314"
+  },
+  {
+    "name": "까미구이집",
+    "category": "한식",
+    "note": "곱창,막창",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/27549014"
+  },
+  {
+    "name": "카레와",
+    "category": "일식",
+    "note": "",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/164990650"
+  },
+  {
+    "name": "와슈다이닝 슈토 2호점",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/866704531"
+  },
+  {
+    "name": "논현삼겹",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/86222547"
+  },
+  {
+    "name": "천미향 논현직영점",
+    "category": "중식",
+    "note": "",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/2091118619"
+  },
+  {
+    "name": "통영다찌",
+    "category": "한식",
+    "note": "회",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/610210855"
+  },
+  {
+    "name": "청와옥 본사직영학동점",
+    "category": "한식",
+    "note": "순대",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/1949089271"
+  },
+  {
+    "name": "향동가",
+    "category": "한식",
+    "note": "냉면",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/147807403"
+  },
+  {
+    "name": "꼴라쥬",
+    "category": "양식",
+    "note": "프랑스음식",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/245774987"
+  },
+  {
+    "name": "안식명가",
+    "category": "한식",
+    "note": "곰탕",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/174371565"
+  },
+  {
+    "name": "안가네 나주곰탕",
+    "category": "한식",
+    "note": "곰탕",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/746876731"
+  },
+  {
+    "name": "진미평양냉면 별관",
+    "category": "한식",
+    "note": "냉면",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/27584230"
+  },
+  {
+    "name": "미가한우&치킨처럼",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/1385532810"
+  },
+  {
+    "name": "진미평양냉면 본관",
+    "category": "한식",
+    "note": "냉면",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/658541467"
+  },
+  {
+    "name": "살롱 드 아난티 겐지",
+    "category": "일식",
+    "note": "",
+    "walk": 4,
+    "map": "http://place.map.kakao.com/80597978"
+  },
+  {
+    "name": "토라레스토랑",
+    "category": "일식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1490724583"
+  },
+  {
+    "name": "유장원보쌈",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/8543163"
+  },
+  {
+    "name": "알로하포케 학동본점",
+    "category": "양식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/862485396"
+  },
+  {
+    "name": "에프케이티제이",
+    "category": "분식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/2074535686"
+  },
+  {
+    "name": "중화객잔 수 강남구청점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/587584319"
+  },
+  {
+    "name": "싸다김밥 학동역점",
+    "category": "분식",
+    "note": "싸다김밥",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1051746541"
+  },
+  {
+    "name": "담미온 학동점",
+    "category": "한식",
+    "note": "국밥",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1997578373"
+  },
+  {
+    "name": "별미식당",
+    "category": "한식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/16906186"
+  },
+  {
+    "name": "써브웨이 학동역점",
+    "category": "패스트푸드",
+    "note": "써브웨이",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1172822839"
+  },
+  {
+    "name": "학동나주곰탕",
+    "category": "한식",
+    "note": "곰탕",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/796215771"
+  },
+  {
+    "name": "유엔미",
+    "category": "양식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1923841820"
+  },
+  {
+    "name": "강남어촌조개구이",
+    "category": "한식",
+    "note": "조개",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1312733658"
+  },
+  {
+    "name": "우제홍초밥",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/5872907"
+  },
+  {
+    "name": "제3한강교",
+    "category": "한식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/782995167"
+  },
+  {
+    "name": "로얄라운지",
+    "category": "양식",
+    "note": "이탈리안",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/12006731"
+  },
+  {
+    "name": "불이아 강남점",
+    "category": "중식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/10452008"
+  },
+  {
+    "name": "두찜 강남논현점",
+    "category": "한식",
+    "note": "두찜",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/825593812"
+  },
+  {
+    "name": "제이아훠궈",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/754239933"
+  },
+  {
+    "name": "아부라소바",
+    "category": "일식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1976649040"
+  },
+  {
+    "name": "카츠공방 학동역점",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/1833119264"
+  },
+  {
+    "name": "고향식당",
+    "category": "한식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/11289621"
+  },
+  {
+    "name": "육전국밥 학동역점",
+    "category": "한식",
+    "note": "국밥",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/688675583"
+  },
+  {
+    "name": "홍명",
+    "category": "중식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/10972091"
+  },
+  {
+    "name": "옥된장 강남구청점",
+    "category": "한식",
+    "note": "옥된장",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/770696914"
+  },
+  {
+    "name": "굿그릴",
+    "category": "양식",
+    "note": "",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/976642310"
+  },
+  {
+    "name": "기영이숯불두마리치킨 강남논현점",
+    "category": "치킨",
+    "note": "기영이숯불두마리치킨",
+    "walk": 5,
+    "map": "http://place.map.kakao.com/882030569"
+  },
+  {
+    "name": "서대문 김치찜&김치찌개",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1651095386"
+  },
+  {
+    "name": "번들",
+    "category": "양식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1496365383"
+  },
+  {
+    "name": "안방",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1984290252"
+  },
+  {
+    "name": "세화정육식당",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/631696368"
+  },
+  {
+    "name": "쉼",
+    "category": "양식",
+    "note": "이탈리안",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/2103578742"
+  },
+  {
+    "name": "화포식당 논현점",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/409727619"
+  },
+  {
+    "name": "헤야",
+    "category": "퓨전요리",
+    "note": "퓨전일식",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/27298029"
+  },
+  {
+    "name": "뜯고기 강남구청점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1634180767"
+  },
+  {
+    "name": "좋은친구",
+    "category": "도시락",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/703302934"
+  },
+  {
+    "name": "토브",
+    "category": "양식",
+    "note": "햄버거",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/231982402"
+  },
+  {
+    "name": "명동칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1329299314"
+  },
+  {
+    "name": "오프닝웍스",
+    "category": "양식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1634972608"
+  },
+  {
+    "name": "피자탑 강남1호점",
+    "category": "양식",
+    "note": "피자탑",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1236855031"
+  },
+  {
+    "name": "가마치통닭 강남구청역점",
+    "category": "치킨",
+    "note": "가마치통닭",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1830668748"
+  },
+  {
+    "name": "땅코참숯구이 논현직영점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/419923613"
+  },
+  {
+    "name": "맛짱조개",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/16063439"
+  },
+  {
+    "name": "거복",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/13095875"
+  },
+  {
+    "name": "화이린",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1642617254"
+  },
+  {
+    "name": "46이너스피자 삼성점",
+    "category": "양식",
+    "note": "피자",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/20036851"
+  },
+  {
+    "name": "BBQ 논현중앙점",
+    "category": "치킨",
+    "note": "BBQ",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/21044791"
+  },
+  {
+    "name": "크래버대게나라 강남점",
+    "category": "한식",
+    "note": "게,대게",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1777540958"
+  },
+  {
+    "name": "황재벌",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/500654484"
+  },
+  {
+    "name": "토가라시",
+    "category": "일식",
+    "note": "일본식라면",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/241205479"
+  },
+  {
+    "name": "이가네양꼬치 강남구청점",
+    "category": "중식",
+    "note": "이가네양꼬치",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1937749932"
+  },
+  {
+    "name": "부엉이돈가스 학동역점",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/2139577552"
+  },
+  {
+    "name": "참맛식당",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/715118611"
+  },
+  {
+    "name": "지리산",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/16475071"
+  },
+  {
+    "name": "본죽&비빔밥cafe 학동역점",
+    "category": "퓨전요리",
+    "note": "본죽&비빔밥cafe",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/775465789"
+  },
+  {
+    "name": "심기동김밥",
+    "category": "분식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/2031238146"
+  },
+  {
+    "name": "파티풀",
+    "category": "도시락",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/10539667"
+  },
+  {
+    "name": "한솥도시락 논현힐탑점",
+    "category": "도시락",
+    "note": "한솥도시락",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1554493159"
+  },
+  {
+    "name": "대삼식당",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/634970976"
+  },
+  {
+    "name": "136길 육미",
+    "category": "일식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/27440495"
+  },
+  {
+    "name": "샐러디 학동역점",
+    "category": "샐러드",
+    "note": "샐러디",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1217635979"
+  },
+  {
+    "name": "이가원항아리 수제비 학동점",
+    "category": "한식",
+    "note": "수제비",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/834327905"
+  },
+  {
+    "name": "제일영동부두",
+    "category": "한식",
+    "note": "회",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1479587278"
+  },
+  {
+    "name": "에머이 학동역점",
+    "category": "아시아음식",
+    "note": "에머이",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/72762370"
+  },
+  {
+    "name": "류몽민",
+    "category": "한식",
+    "note": "닭요리",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1730877984"
+  },
+  {
+    "name": "고향집",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/8188651"
+  },
+  {
+    "name": "김가네 학동역점",
+    "category": "분식",
+    "note": "김가네",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/23483653"
+  },
+  {
+    "name": "영칼로리포케 서울학동역점",
+    "category": "샐러드",
+    "note": "영칼로리포케",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1120907127"
+  },
+  {
+    "name": "엘리에나호텔 일식당 이도",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1436746032"
+  },
+  {
+    "name": "까사안토니오",
+    "category": "양식",
+    "note": "이탈리안",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1895086103"
+  },
+  {
+    "name": "엘리에나 호텔 한식당 케이푸드",
+    "category": "한식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1436691232"
+  },
+  {
+    "name": "진배족발 본점",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/27278133"
+  },
+  {
+    "name": "무명떡볶이 본점",
+    "category": "분식",
+    "note": "떡볶이",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/1964668557"
+  },
+  {
+    "name": "원디그리노스",
+    "category": "퓨전요리",
+    "note": "퓨전중식",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/2134166440"
+  },
+  {
+    "name": "밀양손만두",
+    "category": "분식",
+    "note": "",
+    "walk": 6,
+    "map": "http://place.map.kakao.com/16444138"
+  },
+  {
+    "name": "두지엠아라크렘",
+    "category": "양식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/2062887775"
+  },
+  {
+    "name": "스내치 강남본점",
+    "category": "한식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/26412621"
+  },
+  {
+    "name": "한식밥상 강남점",
+    "category": "한식",
+    "note": "한식밥상",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/559500441"
+  },
+  {
+    "name": "라몬",
+    "category": "양식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1045539408"
+  },
+  {
+    "name": "팔당닭발&오징어",
+    "category": "한식",
+    "note": "닭요리",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/20943718"
+  },
+  {
+    "name": "아난티 앳 강남 비앙드",
+    "category": "양식",
+    "note": "프랑스음식",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/43240270"
+  },
+  {
+    "name": "텐쇼2018",
+    "category": "일식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/470123966"
+  },
+  {
+    "name": "동경규동 강남학동점",
+    "category": "일식",
+    "note": "동경규동",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1954246116"
+  },
+  {
+    "name": "팔당족발",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1284801093"
+  },
+  {
+    "name": "학동김치찜",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/67821907"
+  },
+  {
+    "name": "청계산갈비살",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/10849168"
+  },
+  {
+    "name": "아부라소바",
+    "category": "일식",
+    "note": "일본식라면",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/620324880"
+  },
+  {
+    "name": "콩뿌리콩나물국밥 강남구청점",
+    "category": "한식",
+    "note": "국밥",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/532632180"
+  },
+  {
+    "name": "치킨뱅이 학동역점",
+    "category": "치킨",
+    "note": "치킨뱅이",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/12007438"
+  },
+  {
+    "name": "삼선미 꽃접시해물보쌈 논현점",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1569349344"
+  },
+  {
+    "name": "호세야오리바베큐 논현점",
+    "category": "한식",
+    "note": "오리",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1331631576"
+  },
+  {
+    "name": "곤지암할매소머리국밥 논현점",
+    "category": "한식",
+    "note": "곤지암할매소머리국밥",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1147579722"
+  },
+  {
+    "name": "미아사이공",
+    "category": "아시아음식",
+    "note": "베트남음식",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/13047440"
+  },
+  {
+    "name": "디디치킨 논현본점",
+    "category": "치킨",
+    "note": "디디치킨",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1566499212"
+  },
+  {
+    "name": "팔당충무김밥국수",
+    "category": "한식",
+    "note": "국수",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/23825025"
+  },
+  {
+    "name": "짐승고깃간",
+    "category": "한식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1593349215"
+  },
+  {
+    "name": "이닛(INNIT)",
+    "category": "양식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/298975585"
+  },
+  {
+    "name": "강남물총칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/585589573"
+  },
+  {
+    "name": "원조우미각 본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1763940559"
+  },
+  {
+    "name": "열정국밥 서울강남논현점",
+    "category": "한식",
+    "note": "열정국밥",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1705820167"
+  },
+  {
+    "name": "코부네",
+    "category": "일식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1454853850"
+  },
+  {
+    "name": "돈기부여 강남점",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1071833325"
+  },
+  {
+    "name": "미친피자 강남점",
+    "category": "양식",
+    "note": "피자",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/2108577604"
+  },
+  {
+    "name": "해태곱창 강남점",
+    "category": "한식",
+    "note": "곱창,막창",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1124871601"
+  },
+  {
+    "name": "88식당 신논현점",
+    "category": "한식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/757659420"
+  },
+  {
+    "name": "아이스크림스토리 논현아이파크점",
+    "category": "식품판매",
+    "note": "아이스크림스토리",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/930861053"
+  },
+  {
+    "name": "와사이진",
+    "category": "퓨전요리",
+    "note": "퓨전일식",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/186505027"
+  },
+  {
+    "name": "엠브이피자 강남본점",
+    "category": "양식",
+    "note": "피자",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/436933683"
+  },
+  {
+    "name": "피자는치즈빨 강남점",
+    "category": "양식",
+    "note": "피자",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1748632538"
+  },
+  {
+    "name": "신선우의닭도리탕 강남직영점",
+    "category": "음식점",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1321633382"
+  },
+  {
+    "name": "외계인피자 강남점",
+    "category": "양식",
+    "note": "외계인피자",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/438210185"
+  },
+  {
+    "name": "달인대보칼국수 강남논현점",
+    "category": "한식",
+    "note": "달인대보칼국수",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/2001857680"
+  },
+  {
+    "name": "카레섬 소바다 본점",
+    "category": "일식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1660941181"
+  },
+  {
+    "name": "아난티 앳 강남 베케트",
+    "category": "양식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1753564399"
+  },
+  {
+    "name": "아난티 앳 강남 쁘아쏭",
+    "category": "양식",
+    "note": "해산물",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/765501007"
+  },
+  {
+    "name": "악마의곱도리탕&소곱창대가 강남점",
+    "category": "한식",
+    "note": "",
+    "walk": 7,
+    "map": "http://place.map.kakao.com/1550242322"
+  },
+  {
+    "name": "원석이네",
+    "category": "한식",
+    "note": "냉면",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1985858019"
+  },
+  {
+    "name": "투뿔한우천국 학동역점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/575953219"
+  },
+  {
+    "name": "혜준당 논현점",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1906498931"
+  },
+  {
+    "name": "정우찌개보쌈",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/474943957"
+  },
+  {
+    "name": "판교집 학동직영점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/916074927"
+  },
+  {
+    "name": "제비파스타&리조또",
+    "category": "양식",
+    "note": "제비파스타",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1467292992"
+  },
+  {
+    "name": "벨라꼬모",
+    "category": "양식",
+    "note": "이탈리안",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1126323717"
+  },
+  {
+    "name": "진교동찜닭 논현점",
+    "category": "한식",
+    "note": "진교동찜닭",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1628544152"
+  },
+  {
+    "name": "스시이로",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/984771161"
+  },
+  {
+    "name": "속초백반",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/154244608"
+  },
+  {
+    "name": "고끌림 논현점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/868096121"
+  },
+  {
+    "name": "루돈",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/16415449"
+  },
+  {
+    "name": "고향옥 논현점",
+    "category": "한식",
+    "note": "국밥",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1092941844"
+  },
+  {
+    "name": "방일해장국 논현점",
+    "category": "한식",
+    "note": "해장국",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/16060238"
+  },
+  {
+    "name": "왕고모",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/21529263"
+  },
+  {
+    "name": "목포자매집",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/7876110"
+  },
+  {
+    "name": "파파존스 논현점",
+    "category": "양식",
+    "note": "파파존스",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1374795022"
+  },
+  {
+    "name": "노랑통닭 강남구청점",
+    "category": "치킨",
+    "note": "노랑통닭",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/750612850"
+  },
+  {
+    "name": "모스가든",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/540731064"
+  },
+  {
+    "name": "스시안",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1938633504"
+  },
+  {
+    "name": "바다등푸른생선구이",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/16054117"
+  },
+  {
+    "name": "식당민홍",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1431310106"
+  },
+  {
+    "name": "153테이블 강남1호점",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/557301793"
+  },
+  {
+    "name": "몽글몽글 본점",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/2035568375"
+  },
+  {
+    "name": "뼈다구집 정해장",
+    "category": "한식",
+    "note": "해장국",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1230186507"
+  },
+  {
+    "name": "원갈비",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/169145043"
+  },
+  {
+    "name": "천린",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/11632539"
+  },
+  {
+    "name": "서오릉피자 강남논현점",
+    "category": "양식",
+    "note": "서오릉피자",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/921710503"
+  },
+  {
+    "name": "꼼터 강남본점",
+    "category": "한식",
+    "note": "장어",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/26118766"
+  },
+  {
+    "name": "우정양곱창",
+    "category": "한식",
+    "note": "곱창,막창",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1120567503"
+  },
+  {
+    "name": "정육공방",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/97204597"
+  },
+  {
+    "name": "수수온죽 강남점",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1093775333"
+  },
+  {
+    "name": "한남동24시뼈다귀감자탕 강남분점",
+    "category": "한식",
+    "note": "감자탕",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1843104144"
+  },
+  {
+    "name": "신의한국수 강남논현점",
+    "category": "한식",
+    "note": "국수",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1060934177"
+  },
+  {
+    "name": "해바라기",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/516292239"
+  },
+  {
+    "name": "알촌 논현직영점",
+    "category": "퓨전요리",
+    "note": "퓨전한식",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1716884494"
+  },
+  {
+    "name": "잇츠그린 강남점",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1733491565"
+  },
+  {
+    "name": "흑벽돌집 논현본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1688376744"
+  },
+  {
+    "name": "손칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/13558520"
+  },
+  {
+    "name": "다온바이뱀부",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1969401361"
+  },
+  {
+    "name": "오프닝",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/2010673091"
+  },
+  {
+    "name": "도원반점 논현본점",
+    "category": "중식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/2039617615"
+  },
+  {
+    "name": "몬스터포 강남본점",
+    "category": "아시아음식",
+    "note": "베트남음식",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/764244516"
+  },
+  {
+    "name": "혼돈",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1714752446"
+  },
+  {
+    "name": "주식회사도원명가",
+    "category": "음식점",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1751908916"
+  },
+  {
+    "name": "BHC치킨 강남논현점",
+    "category": "치킨",
+    "note": "BHC치킨",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1889049159"
+  },
+  {
+    "name": "마이니치라멘 토리점",
+    "category": "일식",
+    "note": "일본식라면",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/286840789"
+  },
+  {
+    "name": "샌드위치치폴라 강남점",
+    "category": "패스트푸드",
+    "note": "샌드위치",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1281751311"
+  },
+  {
+    "name": "위글리",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/439383190"
+  },
+  {
+    "name": "구름계란덮밥 강남점",
+    "category": "한식",
+    "note": "구름계란덮밥",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/216802338"
+  },
+  {
+    "name": "파스타입니다 강남점",
+    "category": "양식",
+    "note": "파스타입니다",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/2038792167"
+  },
+  {
+    "name": "훈스돈까스 강남직영점",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1582575891"
+  },
+  {
+    "name": "금메달순대국 왕돈까스 논현직영점",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/250707995"
+  },
+  {
+    "name": "치폴리니 강남점",
+    "category": "패스트푸드",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1308117223"
+  },
+  {
+    "name": "어글리딜리셔스",
+    "category": "치킨",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1429916361"
+  },
+  {
+    "name": "소공동뚝배기집 YMCA점",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/17036634"
+  },
+  {
+    "name": "논현닭한마리",
+    "category": "한식",
+    "note": "닭요리",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1915263562"
+  },
+  {
+    "name": "신림동호남집백순대 논현점",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/853126106"
+  },
+  {
+    "name": "미래옥",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1301218884"
+  },
+  {
+    "name": "보전식당",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/8397392"
+  },
+  {
+    "name": "북촌순대국돼지국밥",
+    "category": "한식",
+    "note": "순대",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1369472671"
+  },
+  {
+    "name": "온까스",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/803188787"
+  },
+  {
+    "name": "그랑크뤼",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1060745318"
+  },
+  {
+    "name": "신신양꼬치",
+    "category": "중식",
+    "note": "양꼬치",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1269053221"
+  },
+  {
+    "name": "엄지네집",
+    "category": "한식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1641212970"
+  },
+  {
+    "name": "공리 강남구청역점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/11026324"
+  },
+  {
+    "name": "비노마노",
+    "category": "양식",
+    "note": "",
+    "walk": 8,
+    "map": "http://place.map.kakao.com/1513977741"
+  },
+  {
+    "name": "담소소사골순대육개장 강남구청역점",
+    "category": "한식",
+    "note": "담소소사골순대육개장",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1283321783"
+  },
+  {
+    "name": "본연",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/143050534"
+  },
+  {
+    "name": "우메인",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1477547778"
+  },
+  {
+    "name": "진전복삼계탕 강남구청점",
+    "category": "한식",
+    "note": "삼계탕",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1117702712"
+  },
+  {
+    "name": "다왕래",
+    "category": "한식",
+    "note": "장어",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/17058166"
+  },
+  {
+    "name": "청양해물칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1924275457"
+  },
+  {
+    "name": "목련식당",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/7867924"
+  },
+  {
+    "name": "닭발존1981 강남구청역점",
+    "category": "한식",
+    "note": "닭요리",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/943649464"
+  },
+  {
+    "name": "강남쪽갈비",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/226730988"
+  },
+  {
+    "name": "왕창칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/16649047"
+  },
+  {
+    "name": "본죽&비빔밥cafe 강남구청역점",
+    "category": "퓨전요리",
+    "note": "본죽&비빔밥cafe",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/2001918525"
+  },
+  {
+    "name": "발리텍사스바베큐",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1315020719"
+  },
+  {
+    "name": "연스시",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1102941798"
+  },
+  {
+    "name": "아낙 잠원점",
+    "category": "음식점",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1277891339"
+  },
+  {
+    "name": "우뚝소곱창 강남구청역점",
+    "category": "한식",
+    "note": "곱창,막창",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1396867918"
+  },
+  {
+    "name": "꼼모아 강남점",
+    "category": "양식",
+    "note": "프랑스음식",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1459674358"
+  },
+  {
+    "name": "술비치 청담",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1529576495"
+  },
+  {
+    "name": "대가",
+    "category": "한식",
+    "note": "아구",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/10262268"
+  },
+  {
+    "name": "투고샐러드 메자닌점",
+    "category": "샐러드",
+    "note": "투고샐러드",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1052040972"
+  },
+  {
+    "name": "원디쉬파스타",
+    "category": "양식",
+    "note": "이탈리안",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/2038516910"
+  },
+  {
+    "name": "구일삼겹 강남본점",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1661211071"
+  },
+  {
+    "name": "타임",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/45177415"
+  },
+  {
+    "name": "오케이 치킨앤피자 논현점",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1189949400"
+  },
+  {
+    "name": "태오",
+    "category": "일식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1048266698"
+  },
+  {
+    "name": "리틀케어레시피 강남점",
+    "category": "샐러드",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/797407989"
+  },
+  {
+    "name": "말김차림리담",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1210819838"
+  },
+  {
+    "name": "요시야",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1028210565"
+  },
+  {
+    "name": "오성팔복반점 강남점",
+    "category": "음식점",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1669156722"
+  },
+  {
+    "name": "그린앤그릴 강남구청역점",
+    "category": "샐러드",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/106149480"
+  },
+  {
+    "name": "20회수산",
+    "category": "한식",
+    "note": "회",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1060470396"
+  },
+  {
+    "name": "리미지",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/10357544"
+  },
+  {
+    "name": "맡김차림리담",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1796473681"
+  },
+  {
+    "name": "어가",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/442731982"
+  },
+  {
+    "name": "예",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/2106188174"
+  },
+  {
+    "name": "스시료마",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/152006978"
+  },
+  {
+    "name": "학돌이네 논현점",
+    "category": "한식",
+    "note": "게,대게",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/613557139"
+  },
+  {
+    "name": "키친드로우",
+    "category": "퓨전요리",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1857690014"
+  },
+  {
+    "name": "파워플랜트",
+    "category": "샐러드",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/755840469"
+  },
+  {
+    "name": "노란상소갈비 강남구청점",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1997921938"
+  },
+  {
+    "name": "본스치킨 강남구청역점",
+    "category": "치킨",
+    "note": "본스치킨",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/24662466"
+  },
+  {
+    "name": "동막촌",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/16084476"
+  },
+  {
+    "name": "잡담",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/572682639"
+  },
+  {
+    "name": "청석골",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/16765360"
+  },
+  {
+    "name": "그때그집",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/9661372"
+  },
+  {
+    "name": "진시황",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1591650744"
+  },
+  {
+    "name": "우리 청담점",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/371864982"
+  },
+  {
+    "name": "빈호",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1972526906"
+  },
+  {
+    "name": "일두정육식당",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/2029903848"
+  },
+  {
+    "name": "포레스트키친",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/178016758"
+  },
+  {
+    "name": "우리동네수산시장",
+    "category": "한식",
+    "note": "회",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1201512217"
+  },
+  {
+    "name": "어미향",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/12618387"
+  },
+  {
+    "name": "한식맛집",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/87393353"
+  },
+  {
+    "name": "와쇼쿠 키라메키",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/229592159"
+  },
+  {
+    "name": "삼호짱뚱이",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/7929136"
+  },
+  {
+    "name": "그날",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1309783648"
+  },
+  {
+    "name": "계열사 논현점",
+    "category": "치킨",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/233623177"
+  },
+  {
+    "name": "금보성",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/11670906"
+  },
+  {
+    "name": "미우가",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/94505617"
+  },
+  {
+    "name": "백반로드",
+    "category": "뷔페",
+    "note": "한식뷔페",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/687180573"
+  },
+  {
+    "name": "코지",
+    "category": "일식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/16767809"
+  },
+  {
+    "name": "전주식당",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/8059543"
+  },
+  {
+    "name": "동천홍 논현점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/17207656"
+  },
+  {
+    "name": "마루바이쿠시마사",
+    "category": "일식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/984701541"
+  },
+  {
+    "name": "육색찬란",
+    "category": "한식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/828932257"
+  },
+  {
+    "name": "지니",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/14748715"
+  },
+  {
+    "name": "공리특허짬뽕 논현본점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/26965931"
+  },
+  {
+    "name": "창신한우정육식당",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/21406278"
+  },
+  {
+    "name": "365활새우 창우수산 강남본점",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/992715161"
+  },
+  {
+    "name": "청담우",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1566026758"
+  },
+  {
+    "name": "언타이틀",
+    "category": "양식",
+    "note": "",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1208061065"
+  },
+  {
+    "name": "논현집",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1456251988"
+  },
+  {
+    "name": "강남대하구이",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1799942018"
+  },
+  {
+    "name": "포인비에트 강남구청역본점",
+    "category": "아시아음식",
+    "note": "베트남음식",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/818121840"
+  },
+  {
+    "name": "순대실록 강남구청점",
+    "category": "한식",
+    "note": "순대실록",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/806582420"
+  },
+  {
+    "name": "강화통통생고기 논현점",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 9,
+    "map": "http://place.map.kakao.com/1990209305"
+  },
+  {
+    "name": "짬뽕지존 강남구청점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2094221296"
+  },
+  {
+    "name": "사계절집 강남본점",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/556233757"
+  },
+  {
+    "name": "레몬그라스타이 강남구청점",
+    "category": "아시아음식",
+    "note": "태국음식",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/717852339"
+  },
+  {
+    "name": "평양면옥",
+    "category": "한식",
+    "note": "냉면",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/8130016"
+  },
+  {
+    "name": "완도1957",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1137146995"
+  },
+  {
+    "name": "등촌샤브칼국수 강남구청역점",
+    "category": "샤브샤브",
+    "note": "등촌샤브칼국수",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/957255176"
+  },
+  {
+    "name": "구뜰",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/296740017"
+  },
+  {
+    "name": "스시나미키",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1615871"
+  },
+  {
+    "name": "버텍스 논현점",
+    "category": "퓨전요리",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/578801683"
+  },
+  {
+    "name": "슬로우캘리 강남구청역점",
+    "category": "샐러드",
+    "note": "슬로우캘리",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2022704956"
+  },
+  {
+    "name": "갑기회관 강남본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1336312265"
+  },
+  {
+    "name": "머드내 갈비살",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2036686868"
+  },
+  {
+    "name": "샐러링 언주역점",
+    "category": "샐러드",
+    "note": "샐러링",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2032284015"
+  },
+  {
+    "name": "쿠시마사",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/27489305"
+  },
+  {
+    "name": "고끌림 언주점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2084570032"
+  },
+  {
+    "name": "호별관",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1533414880"
+  },
+  {
+    "name": "가나돈까스의집",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16875542"
+  },
+  {
+    "name": "김가네 도산로점",
+    "category": "분식",
+    "note": "김가네",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16847108"
+  },
+  {
+    "name": "제로한식 건강을생각한맛있는한끼",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1846323512"
+  },
+  {
+    "name": "대한냉면 강남점",
+    "category": "한식",
+    "note": "냉면",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1715689784"
+  },
+  {
+    "name": "류",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1336075711"
+  },
+  {
+    "name": "도시락키친",
+    "category": "도시락",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/20124599"
+  },
+  {
+    "name": "인생치밥숯불치킨 강남본점",
+    "category": "치킨",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1715646494"
+  },
+  {
+    "name": "유정식당",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16037952"
+  },
+  {
+    "name": "바다꽃드새우",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/927822639"
+  },
+  {
+    "name": "깡우동 논현점",
+    "category": "일식",
+    "note": "깡우동",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1571924973"
+  },
+  {
+    "name": "백소정 강남구청점",
+    "category": "일식",
+    "note": "백소정",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/827556234"
+  },
+  {
+    "name": "백암왕순대",
+    "category": "한식",
+    "note": "순대",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16737435"
+  },
+  {
+    "name": "오가고",
+    "category": "한식",
+    "note": "회",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/18369499"
+  },
+  {
+    "name": "다모아분식",
+    "category": "분식",
+    "note": "떡볶이",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16065669"
+  },
+  {
+    "name": "베지야",
+    "category": "패스트푸드",
+    "note": "샌드위치",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/815578436"
+  },
+  {
+    "name": "우미호타루",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/21416885"
+  },
+  {
+    "name": "포몬스 차병원점",
+    "category": "아시아음식",
+    "note": "포몬스",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/17951794"
+  },
+  {
+    "name": "두어마리",
+    "category": "한식",
+    "note": "장어",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/24785949"
+  },
+  {
+    "name": "원조상석안동갈비 본점",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/98196706"
+  },
+  {
+    "name": "낭만식당",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16417985"
+  },
+  {
+    "name": "백미우",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1573714126"
+  },
+  {
+    "name": "부타노맥스",
+    "category": "일식",
+    "note": "일본식라면",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1616903182"
+  },
+  {
+    "name": "일족",
+    "category": "음식점",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1082035881"
+  },
+  {
+    "name": "보금집 논현본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2031312731"
+  },
+  {
+    "name": "유원",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/157629378"
+  },
+  {
+    "name": "호루몬 규상 논현본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/95009418"
+  },
+  {
+    "name": "솥두껍 논현언주직영점",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/233304171"
+  },
+  {
+    "name": "동대문엽기떡볶이 언주역점",
+    "category": "분식",
+    "note": "동대문엽기떡볶이",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/446888918"
+  },
+  {
+    "name": "돈먹고돈내고 강남점",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1368241589"
+  },
+  {
+    "name": "다다돈까스",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/13582455"
+  },
+  {
+    "name": "옛날돈가스 우동",
+    "category": "일식",
+    "note": "돈까스,우동",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16589388"
+  },
+  {
+    "name": "강남주먹고기",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/21417385"
+  },
+  {
+    "name": "해물꽃돈",
+    "category": "퓨전요리",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1010873936"
+  },
+  {
+    "name": "호식이두마리치킨 논현1호점",
+    "category": "치킨",
+    "note": "호식이두마리치킨",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1477091042"
+  },
+  {
+    "name": "이층고깃집 강남구청역점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/423334112"
+  },
+  {
+    "name": "돈돌부대찌개매니아 강남구청역점",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/888761347"
+  },
+  {
+    "name": "제주흑냉삼",
+    "category": "한식",
+    "note": "삼겹살",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/620224715"
+  },
+  {
+    "name": "마봉양꼬치",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/953851702"
+  },
+  {
+    "name": "정가네손칼국수",
+    "category": "한식",
+    "note": "칼국수",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16557397"
+  },
+  {
+    "name": "원픽",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1960788354"
+  },
+  {
+    "name": "모스버거 익스프레스 강남구청역점",
+    "category": "패스트푸드",
+    "note": "모스버거",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/25121593"
+  },
+  {
+    "name": "슈바빙",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1024670188"
+  },
+  {
+    "name": "신천할매떡볶이 논현점",
+    "category": "분식",
+    "note": "떡볶이",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/771734483"
+  },
+  {
+    "name": "짱이네산곰장어",
+    "category": "한식",
+    "note": "장어",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/14982154"
+  },
+  {
+    "name": "신떡순 논현점",
+    "category": "분식",
+    "note": "신떡순",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/167585835"
+  },
+  {
+    "name": "요녀석 강남점",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/764688721"
+  },
+  {
+    "name": "일언족발 본점",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/19635600"
+  },
+  {
+    "name": "몽갈비",
+    "category": "한식",
+    "note": "갈비",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1355293861"
+  },
+  {
+    "name": "에이든청담호텔 에이라운지",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1093984278"
+  },
+  {
+    "name": "못이저 논현점",
+    "category": "한식",
+    "note": "감자탕",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1504136998"
+  },
+  {
+    "name": "더케이에프엔비 엠제이컴퍼니",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1269535774"
+  },
+  {
+    "name": "은우 논현점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1711146395"
+  },
+  {
+    "name": "잇쇼타코야끼",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/246536331"
+  },
+  {
+    "name": "선향정샤브샤브 언주역점",
+    "category": "샤브샤브",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1260904929"
+  },
+  {
+    "name": "대순집",
+    "category": "한식",
+    "note": "순대",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/762539073"
+  },
+  {
+    "name": "곰스603",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/25720549"
+  },
+  {
+    "name": "황금족발보쌈",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/480438985"
+  },
+  {
+    "name": "이조림 논현점",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/324979279"
+  },
+  {
+    "name": "플라야라운지",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/287176773"
+  },
+  {
+    "name": "알라프리마",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/27129003"
+  },
+  {
+    "name": "1808",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1146706900"
+  },
+  {
+    "name": "아이디",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/806025644"
+  },
+  {
+    "name": "화니스시",
+    "category": "일식",
+    "note": "초밥,롤",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1363616704"
+  },
+  {
+    "name": "제주올래밥상 논현점",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2132385605"
+  },
+  {
+    "name": "영동장어",
+    "category": "한식",
+    "note": "장어",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1257441291"
+  },
+  {
+    "name": "테이블105",
+    "category": "한식",
+    "note": "해물,생선",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2057040497"
+  },
+  {
+    "name": "뇽즈 강남점",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1676698670"
+  },
+  {
+    "name": "생선물은 고양이",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2094399031"
+  },
+  {
+    "name": "제주화로집 논현언주점",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1465639845"
+  },
+  {
+    "name": "제레미도산",
+    "category": "양식",
+    "note": "햄버거",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/746436578"
+  },
+  {
+    "name": "더케이에프엔비 뽁깨비",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/57865676"
+  },
+  {
+    "name": "파스타다",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1193505607"
+  },
+  {
+    "name": "순정한우정육식당 논현점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1479936876"
+  },
+  {
+    "name": "마포고깃간 논현점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1313964799"
+  },
+  {
+    "name": "NOR",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1800258461"
+  },
+  {
+    "name": "비스포킷 까사 논현점",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/523587294"
+  },
+  {
+    "name": "다복수사",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/496298782"
+  },
+  {
+    "name": "헬키푸키 논현점",
+    "category": "분식",
+    "note": "헬키푸키",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1738029126"
+  },
+  {
+    "name": "우연",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/740256978"
+  },
+  {
+    "name": "진미식당",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/2020478324"
+  },
+  {
+    "name": "청송숯불화로구이",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16555281"
+  },
+  {
+    "name": "밥한민국 논현점",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/966372643"
+  },
+  {
+    "name": "보틀즈바이츠앤비욘드",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1079349475"
+  },
+  {
+    "name": "구구족 강남논현점",
+    "category": "한식",
+    "note": "구구족",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1321113608"
+  },
+  {
+    "name": "남도음식토말 본점",
+    "category": "한식",
+    "note": "한정식",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/11594198"
+  },
+  {
+    "name": "앤디포인트 서울강남지점",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1198433727"
+  },
+  {
+    "name": "끼니위드팜 강남논현점",
+    "category": "샐러드",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/40271144"
+  },
+  {
+    "name": "진오돌뼈 본점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16821683"
+  },
+  {
+    "name": "레폴리",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/697126617"
+  },
+  {
+    "name": "철화",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/178467051"
+  },
+  {
+    "name": "기와집 강남직영점",
+    "category": "한식",
+    "note": "삼계탕",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1108248231"
+  },
+  {
+    "name": "두성전주콩나물국밥 강남구청역점",
+    "category": "한식",
+    "note": "국밥",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/267234386"
+  },
+  {
+    "name": "어도",
+    "category": "일식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/8497356"
+  },
+  {
+    "name": "비노앤스피릿",
+    "category": "양식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/663284939"
+  },
+  {
+    "name": "한성칼국수",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/8140834"
+  },
+  {
+    "name": "깐부치킨 언주역점",
+    "category": "치킨",
+    "note": "깐부치킨",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/183609633"
+  },
+  {
+    "name": "짜글이미식회 논현점",
+    "category": "한식",
+    "note": "찌개,전골",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/348190118"
+  },
+  {
+    "name": "처갓집양념치킨 논현점",
+    "category": "치킨",
+    "note": "처갓집양념치킨",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/13050488"
+  },
+  {
+    "name": "황비홍마라탕 논현점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1798611425"
+  },
+  {
+    "name": "타쿠타쿠",
+    "category": "일식",
+    "note": "일본식라면",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1563016763"
+  },
+  {
+    "name": "피저스 논현점",
+    "category": "양식",
+    "note": "피자",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/1702820819"
+  },
+  {
+    "name": "깐부치킨 강남구청역3번출구점",
+    "category": "치킨",
+    "note": "깐부치킨",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/18260687"
+  },
+  {
+    "name": "옥스도산스테이크앤그릴",
+    "category": "양식",
+    "note": "스테이크,립",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/491528113"
+  },
+  {
+    "name": "경몽루 논현점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/224013870"
+  },
+  {
+    "name": "부잣집",
+    "category": "한식",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/16822176"
+  },
+  {
+    "name": "슬로우 도산",
+    "category": "샐러드",
+    "note": "",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/703961177"
+  },
+  {
+    "name": "무아국수 강남구청점",
+    "category": "한식",
+    "note": "족발,보쌈",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/13306360"
+  },
+  {
+    "name": "모모유부 강남구청점",
+    "category": "일식",
+    "note": "모모유부",
+    "walk": 10,
+    "map": "http://place.map.kakao.com/781904767"
+  },
+  {
+    "name": "프랭크버거 논현아크로힐스점",
+    "category": "양식",
+    "note": "프랭크버거",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/898396765"
+  },
+  {
+    "name": "고기가득덮밥 강남구청역점",
+    "category": "일식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/221175451"
+  },
+  {
+    "name": "춘리마라탕 아크로힐스점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1082797951"
+  },
+  {
+    "name": "단백하루",
+    "category": "샐러드",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1644196362"
+  },
+  {
+    "name": "쁘띠팔레",
+    "category": "양식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/36071793"
+  },
+  {
+    "name": "BBQ 빌리지논현점",
+    "category": "치킨",
+    "note": "BBQ",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/718319263"
+  },
+  {
+    "name": "명가김밥",
+    "category": "분식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/11353859"
+  },
+  {
+    "name": "묵호일식",
+    "category": "일식",
+    "note": "일식집",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/26429267"
+  },
+  {
+    "name": "중앙실비",
+    "category": "한식",
+    "note": "곱창,막창",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1224188224"
+  },
+  {
+    "name": "라쿵푸 강남구청점",
+    "category": "중식",
+    "note": "중국요리",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/247885013"
+  },
+  {
+    "name": "하나",
+    "category": "분식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/172833346"
+  },
+  {
+    "name": "인생아구찜 강남점",
+    "category": "한식",
+    "note": "인생아구찜",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1996955650"
+  },
+  {
+    "name": "김밥천국 강남구청역점",
+    "category": "분식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/16650213"
+  },
+  {
+    "name": "달잔 논현본점",
+    "category": "한식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1233265459"
+  },
+  {
+    "name": "우천식육식당 강남구청점",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/709857238"
+  },
+  {
+    "name": "우담",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/295146706"
+  },
+  {
+    "name": "신안가옥",
+    "category": "한식",
+    "note": "육류,고기",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1280070127"
+  },
+  {
+    "name": "청국장",
+    "category": "한식",
+    "note": "",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/12053613"
+  },
+  {
+    "name": "바르다김선생 논현아크로힐스점",
+    "category": "분식",
+    "note": "바르다김선생",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/26471720"
+  },
+  {
+    "name": "싸다김밥 강남구청역점",
+    "category": "분식",
+    "note": "싸다김밥",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/1788208577"
+  },
+  {
+    "name": "부부불이 동대문닭한마리",
+    "category": "한식",
+    "note": "닭요리",
+    "walk": 11,
+    "map": "http://place.map.kakao.com/16557908"
+  }
+]

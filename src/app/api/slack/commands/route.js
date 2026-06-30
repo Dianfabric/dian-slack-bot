@@ -82,6 +82,8 @@ function buildLunchResponse(text) {
     ? `🍚 *오늘 점심 추천* (${text.trim()} 중에서, 후보 ${pool.length}곳)`
     : `🍚 *오늘 점심 추천* (학동역 도보권 ${pool.length}곳 중)`;
 
+  const catLine = pick.note ? `${pick.category} · ${pick.note}` : pick.category;
+  const walkLine = pick.walk ? `📍 도보 약 ${pick.walk}분` : '';
   return {
     response_type: 'in_channel',
     blocks: [
@@ -90,7 +92,7 @@ function buildLunchResponse(text) {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*${pick.name}*  _(${pick.category})_\n${pick.note}\n<${pick.map}|🗺️ 카카오맵에서 보기>`,
+          text: `*${pick.name}*  _(${catLine})_\n${walkLine}\n<${pick.map}|🗺️ 카카오맵에서 보기>`,
         },
       },
       {

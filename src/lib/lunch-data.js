@@ -1,29 +1,25 @@
-// 학동역(사무실: 학동로 224 삼환아르누보Ⅲ) 도보권 점심 후보
-// ⚠️ 시작용 검증 데이터 — 카카오 로컬 API 수집(scripts/collect-restaurants.mjs) 완료 후
-//    구글시트 기반으로 교체 예정. 지금은 코드 내장 리스트로 동작.
-// 지도링크는 카카오맵 검색 URL이라 항상 안전하게 열립니다.
+// 학동역(사무실: 학동로 224 삼환아르누보Ⅲ) 도보권 점심 후보 — 무작위 추천 로직
+// 데이터(src/lib/lunch-restaurants.json)는 카카오 로컬 API 수집 결과.
+//   재수집/갱신: KAKAO_REST_KEY=키 node scripts/collect-restaurants.mjs
+// 지도링크는 각 가게의 카카오 place URL.
 
-const mapLink = (name) => `https://map.kakao.com/?q=${encodeURIComponent(name)}`;
+import RAW from './lunch-restaurants.json';
 
-export const RESTAURANTS = [
-  { name: '진미평양냉면', category: '한식', note: '평양냉면' },
-  { name: '홍명',         category: '중식', note: '짜장면·중화요리' },
-  { name: '류몽민',       category: '한식', note: '닭갈비' },
-  { name: '토가라시',     category: '일식', note: '라멘 (점심 웨이팅)' },
-  { name: '히로야',       category: '일식', note: '라멘 (혼밥 가능)' },
-  { name: '논현삼겹',     category: '한식', note: '고기구이 (점심 오픈런)' },
-  { name: '나베류',       category: '일식', note: '샤브샤브·밀푀유나베' },
-].map((r) => ({ ...r, map: mapLink(r.name) }));
+export const RESTAURANTS = RAW;
 
-// 분류 키워드 → 실제 카테고리 매핑 (사용자가 /점심 한식 처럼 입력)
+// 사용자가 /점심 뒤에 입력하는 키워드 → 실제 분류 매핑
 const CATEGORY_ALIASES = {
   한식: ['한식'], 중식: ['중식'], 일식: ['일식'], 양식: ['양식'],
-  분식: ['분식'], 면: ['한식', '일식'], 고기: ['한식'], 라멘: ['일식'],
+  분식: ['분식'], 치킨: ['치킨'], 샐러드: ['샐러드'], 도시락: ['도시락'],
+  뷔페: ['뷔페'], 샤브샤브: ['샤브샤브'], 샤브: ['샤브샤브'],
+  퓨전: ['퓨전요리'], 아시아: ['아시아음식'], 패스트푸드: ['패스트푸드'],
+  버거: ['패스트푸드'], 햄버거: ['패스트푸드'],
+  고기: ['한식'], 면: ['한식', '일식', '중식'], 라멘: ['일식'], 피자: ['양식'],
 };
 
 /**
  * 점심 한 곳 무작위 추천.
- * @param {string} filterText - 사용자가 /점심 뒤에 입력한 텍스트(분류 등). 없으면 전체.
+ * @param {string} filterText - /점심 뒤 입력 텍스트(분류·키워드). 없으면 전체.
  * @returns {{pick: object, pool: object[], filtered: boolean}}
  */
 export function pickLunch(filterText = '') {
@@ -34,7 +30,7 @@ export function pickLunch(filterText = '') {
   if (key) {
     const wanted = CATEGORY_ALIASES[key] || [key];
     const matched = RESTAURANTS.filter(
-      (r) => wanted.includes(r.category) || r.name.includes(key) || r.note.includes(key)
+      (r) => wanted.includes(r.category) || r.name.includes(key) || (r.note && r.note.includes(key))
     );
     if (matched.length > 0) {
       pool = matched;
