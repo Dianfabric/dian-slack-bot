@@ -48,16 +48,15 @@ export async function buildStockContext(userMessage = '') {
     const low = t.toLowerCase();
     if (SYMPHONY_PRODUCTS.has(low)) { grouped.SYMPHONY.push(low); return; }
     const sup = await lookupSupplier(t);
-    if (sup) {
-      const S = sup.toUpperCase();
-      if (S === 'EK' || S === 'EK UNIQUE') grouped.EK.push(t);
-      else if (S === 'RICKY') grouped.RICKY.push(t);
-      else if (S === 'QBH') grouped.QBH.push(t);
-      else noApi.push(`${t}=${sup}`);
-      return;
-    }
-    // Supabase 미스 → 영문 제품명이면 Symphony로 시도 (없으면 404 무시)
-    if (maybeSymphony(low)) grouped.SYMPHONY.push(low);
+    const S = (sup || '').toUpperCase();
+    if (S === 'EK' || S === 'EK UNIQUE') { grouped.EK.push(t); return; }
+    if (S === 'RICKY') { grouped.RICKY.push(t); return; }
+    if (S === 'QBH') { grouped.QBH.push(t); return; }
+    if (S && S !== 'UNKNOWN') { noApi.push(`${t}=${sup}`); return; } // 실시간 미지원 공급처(YINUO·HENGLI 등)
+    // 공급처 불명(UNKNOWN/미등록 ~3500건) → API로 자동 탐색. 카탈로그에 있는 곳만 응답.
+    if (maybeSymphony(low)) { grouped.SYMPHONY.push(low); return; } // 영문 제품명 → Symphony
+    grouped.RICKY.push(t);  // RICKY 무인증(부담 적음)
+    grouped.QBH.push(t);    // QBH (G####·AD-#### 등 중국코드)
   }));
 
   const hasAny = Object.values(grouped).some((a) => a.length);
