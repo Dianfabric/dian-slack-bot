@@ -29,6 +29,13 @@ async function lookupSupplier(token) {
   }
 }
 
+// Symphony는 Supabase에 없음(영문 제품명 별도체계) → Supabase 미스 + 영문단어면 Symphony 후보로 시도.
+// Symphony API가 없는 slug는 404로 자동 무시되므로, 목록 하드코딩 없이 전 제품 자동 인식.
+const SYMPHONY_STOPWORDS = new Set(['stock', 'fabric', 'color', 'colour', 'yard', 'yards', 'meter', 'meters', 'roll', 'rolls', 'check', 'supplier', 'available', 'item', 'code', 'price', 'order', 'the', 'and', 'for']);
+function maybeSymphony(low) {
+  return /^[a-z][a-z]{2,24}(-[a-z]+)?$/.test(low) && !SYMPHONY_STOPWORDS.has(low);
+}
+
 export async function buildStockContext(userMessage = '') {
   const msg = String(userMessage);
   if (!STOCK_KW.some((k) => msg.toLowerCase().includes(k.toLowerCase()))) return '';
@@ -41,12 +48,16 @@ export async function buildStockContext(userMessage = '') {
     const low = t.toLowerCase();
     if (SYMPHONY_PRODUCTS.has(low)) { grouped.SYMPHONY.push(low); return; }
     const sup = await lookupSupplier(t);
-    if (!sup) return;
-    const S = sup.toUpperCase();
-    if (S === 'EK' || S === 'EK UNIQUE') grouped.EK.push(t);
-    else if (S === 'RICKY') grouped.RICKY.push(t);
-    else if (S === 'QBH') grouped.QBH.push(t);
-    else noApi.push(`${t}=${sup}`);
+    if (sup) {
+      const S = sup.toUpperCase();
+      if (S === 'EK' || S === 'EK UNIQUE') grouped.EK.push(t);
+      else if (S === 'RICKY') grouped.RICKY.push(t);
+      else if (S === 'QBH') grouped.QBH.push(t);
+      else noApi.push(`${t}=${sup}`);
+      return;
+    }
+    // Supabase 미스 → 영문 제품명이면 Symphony로 시도 (없으면 404 무시)
+    if (maybeSymphony(low)) grouped.SYMPHONY.push(low);
   }));
 
   const hasAny = Object.values(grouped).some((a) => a.length);
