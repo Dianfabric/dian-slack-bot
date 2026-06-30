@@ -3,6 +3,7 @@ import { waitUntil } from '@vercel/functions';
 import { verifySlackRequest, sendBotReply, sendSlackMessage, getChannelHistory, buildConversationContext } from '@/lib/slack';
 import { getSheetTabs, readSheet } from '@/lib/sheets';
 import { askDianBot } from '@/lib/ai';
+import { pickLunch } from '@/lib/lunch-data';
 
 export const maxDuration = 60;
 
@@ -36,7 +37,9 @@ export async function POST(request) {
   const body = await request.text();
   const headers = Object.fromEntries(request.headers);
 
-  if (!verifySlackRequest(process.env.SLACK_SIGNING_SECRET, headers, body)) {
+  // 업무봇(diavis) + 점심봇(diavis_lunch) 두 앱의 시크릿 모두 허용
+  const signingSecrets = [process.env.SLACK_SIGNING_SECRET, process.env.SLACK_SIGNING_SECRET_LUNCH];
+  if (!verifySlackRequest(signingSecrets, headers, body)) {
     console.error('[Auth] Invalid Slack signature');
     return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
   }
@@ -62,9 +65,43 @@ export async function POST(request) {
     case '/디안':
       waitUntil(handleGeneral(text, channelId));
       return NextResponse.json({ response_type: 'ephemeral', text: '🤖 디안봇이 답변을 준비하고 있습니다...' });
+    case '/점심':
+      // 시트·AI 없이 즉석 무작위 추천 → 동기 응답(채널에 공유)
+      return NextResponse.json(buildLunchResponse(text));
     default:
       return NextResponse.json({ response_type: 'ephemeral', text: `알 수 없는 명령어입니다: ${command}` });
   }
+}
+
+/**
+ * /점심 무작위 추천 메시지(블록) 생성. 채널에 공유(in_channel).
+ */
+function buildLunchResponse(text) {
+  const { pick, pool, filtered } = pickLunch(text);
+  const header = filtered
+    ? `🍚 *오늘 점심 추천* (${text.trim()} 중에서, 후보 ${pool.length}곳)`
+    : `🍚 *오늘 점심 추천* (학동역 도보권 ${pool.length}곳 중)`;
+
+  return {
+    response_type: 'in_channel',
+    blocks: [
+      { type: 'section', text: { type: 'mrkdwn', text: header } },
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `*${pick.name}*  _(${pick.category})_\n${pick.note}\n<${pick.map}|🗺️ 카카오맵에서 보기>`,
+        },
+      },
+      {
+        type: 'context',
+        elements: [
+          { type: 'mrkdwn', text: '다시 뽑기 `/점심`  ·  분류 지정 `/점심 한식` `/점심 일식`' },
+        ],
+      },
+    ],
+    text: `오늘 점심 추천: ${pick.name} (${pick.category})`,
+  };
 }
 
 async function handleInventory(query, channel) {

@@ -1,5 +1,7 @@
 import crypto from 'crypto';
 
+// signingSecret 은 단일 문자열 또는 여러 앱의 시크릿 배열을 받는다.
+// (업무봇 diavis + 점심봇 diavis_lunch 가 같은 엔드포인트를 쓰므로 둘 다 통과시켜야 함)
 export function verifySlackRequest(signingSecret, headers, body) {
   const timestamp = headers['x-slack-request-timestamp'];
   const slackSignature = headers['x-slack-signature'];
@@ -8,16 +10,18 @@ export function verifySlackRequest(signingSecret, headers, body) {
   const fiveMinutesAgo = Math.floor(Date.now() / 1000) - 60 * 5;
   if (parseInt(timestamp) < fiveMinutesAgo) return false;
 
+  const secrets = (Array.isArray(signingSecret) ? signingSecret : [signingSecret]).filter(Boolean);
   const sigBasestring = `v0:${timestamp}:${body}`;
-  const mySignature = 'v0=' + crypto
-    .createHmac('sha256', signingSecret)
-    .update(sigBasestring, 'utf8')
-    .digest('hex');
+  const slackBuf = Buffer.from(slackSignature, 'utf8');
 
-  return crypto.timingSafeEqual(
-    Buffer.from(mySignature, 'utf8'),
-    Buffer.from(slackSignature, 'utf8')
-  );
+  return secrets.some((secret) => {
+    const mySignature = 'v0=' + crypto
+      .createHmac('sha256', secret)
+      .update(sigBasestring, 'utf8')
+      .digest('hex');
+    const myBuf = Buffer.from(mySignature, 'utf8');
+    return myBuf.length === slackBuf.length && crypto.timingSafeEqual(myBuf, slackBuf);
+  });
 }
 
 export async function sendSlackMessage(channel, text, blocks = null) {
