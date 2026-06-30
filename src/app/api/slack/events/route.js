@@ -3,6 +3,7 @@ import { waitUntil } from '@vercel/functions';
 import { verifySlackRequest, sendBotReply, sendSlackMessage, getChannelHistory, buildConversationContext } from '@/lib/slack';
 import { askDianBot } from '@/lib/ai';
 import { getSheetTabs, readSheet } from '@/lib/sheets';
+import { buildStockContext } from '@/lib/stock-context';
 
 export const maxDuration = 60;
 
@@ -99,15 +100,19 @@ async function handleMessage(event) {
       sheetIds.push(process.env.SHEET_ID_PRICING);
     }
 
-    const [history, ...sheetResults] = await Promise.all([
+    const [history, stockCtx, ...sheetResults] = await Promise.all([
       getChannelHistory(channel).then(msgs => buildConversationContext(msgs)),
+      buildStockContext(userMessage).catch(e => {
+        console.error('[Event] overseas stock fail:', e.message);
+        return '';
+      }),
       ...sheetIds.map(id => readAllSheetData(id).catch(e => {
         console.error('[Event] sheet read fail:', e.message);
         return '';
       })),
     ]);
 
-    const context = history + sheetResults.join('');
+    const context = history + stockCtx + sheetResults.join('');
     console.log('[Event] Context length:', context.length);
 
     const answer = await askDianBot(userMessage, context);
