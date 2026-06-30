@@ -13,10 +13,15 @@ const SYMPHONY_PRODUCTS = new Set([
 
 // 원단 코드/제품명 후보 추출 (영문+숫자, 3자 이상). 예: LD1906P, KOSHER, 83100, Arctic, tivoli-performance
 function extractTokens(msg) {
-  // 색상번호(#01·#900) 제거 — 검색 대상은 원단코드뿐. 안 그러면 "900"이 엉뚱한 코드에 매칭됨.
+  // 디안 표기: 품명#컬러 또는 품명-컬러 (뒤가 컬러번호). 검색은 품명만.
+  // 1) '#컬러' 제거  2) 토큰 끝의 '-컬러번호(1~3자리)' 제거 (예: AD-91007-04 → AD-91007, G1950-02 → G1950).
+  //    단 5자리+ 코드(AD-91007의 91007)나 -performance 같은 단어는 품명 일부라 보존.
   const cleaned = String(msg).replace(/#\s*\w+/g, ' ');
   const m = cleaned.match(/[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/g) || [];
-  return [...new Set(m.filter((t) => t.length >= 3 && !/^\d{1,2}$/.test(t)))];
+  return [...new Set(
+    m.map((t) => t.replace(/-\d{1,3}$/, ''))
+     .filter((t) => t.length >= 3 && !/^\d{1,2}$/.test(t)),
+  )];
 }
 
 async function lookupSupplier(token) {
@@ -59,7 +64,10 @@ export async function buildStockContext(userMessage = '') {
   const hasAny = Object.values(grouped).some((a) => a.length);
   if (!hasAny) return '';
 
-  const { items, errors } = await checkAll(grouped);
+  const { items: rawItems, errors } = await checkAll(grouped);
+  // 느슨한(prefix/fuzzy) 매칭 노이즈 제거 — 검색어가 실제로 코드에 포함된 것만.
+  const up = tokens.map((t) => t.toUpperCase());
+  const items = rawItems.filter((it) => up.some((tk) => String(it.code).toUpperCase().includes(tk)));
   if (!items.length) {
     return errors.length ? `\n[해외 재고조회 일부 실패: ${errors.join(', ')}]\n` : '';
   }
