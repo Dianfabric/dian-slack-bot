@@ -22,12 +22,15 @@ export async function check(terms = [], env = process.env) {
   const tok = await login(env);
   const out = [];
   await Promise.all(terms.map(async (t) => {
-    const url = `${API}/Stock/MyCompanyList?searchkey=${encodeURIComponent(t)}&token=${encodeURIComponent(tok)}&source=mobile`;
-    const r = await fetch(url);
-    const j = await r.json();
-    for (const d of ((j.Data && j.Data.data) || [])) {
-      out.push({ supplier: 'QBH', code: d.bianhao, meters: numFrom(d.Canshu11), maxRollM: numFrom(d.Canshu12), transitM: numFrom(d.Canshu13) });
-    }
+    try {
+      const url = `${API}/Stock/MyCompanyList?searchkey=${encodeURIComponent(t)}&token=${encodeURIComponent(tok)}&source=mobile`;
+      const text = await (await fetch(url)).text();
+      if (!text) return;
+      const j = JSON.parse(text);
+      for (const d of ((j.Data && j.Data.data) || [])) {
+        out.push({ supplier: 'QBH', code: d.bianhao, meters: numFrom(d.Canshu11), maxRollM: numFrom(d.Canshu12), transitM: numFrom(d.Canshu13) });
+      }
+    } catch { /* 스킵 */ }
   }));
   return out;
 }

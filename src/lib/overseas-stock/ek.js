@@ -19,16 +19,20 @@ export async function check(terms = [], env = process.env) {
   const cookie = await login(env);
   const out = [];
   await Promise.all(terms.map(async (t) => {
-    const series = String(t).split('-')[0];
-    const r = await fetch(`${BASE}/Product/List`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest', Cookie: cookie },
-      body: new URLSearchParams({ PageIndex: '1', PageSize: '200', Type: '', Series: '', Search: series }),
-    });
-    const j = await r.json();
-    for (const d of (j.Data || [])) {
-      out.push({ supplier: 'EK', code: d.Bianhao, meters: numFrom(d.Canshu11), maxRollM: numFrom(d.Canshu12), transitM: numFrom(d.Canshu13) });
-    }
+    try {
+      const series = String(t).split('-')[0];
+      const r = await fetch(`${BASE}/Product/List`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest', Cookie: cookie },
+        body: new URLSearchParams({ PageIndex: '1', PageSize: '200', Type: '', Series: '', Search: series }),
+      });
+      const text = await r.text();
+      if (!text) return; // EK는 결과 없을 때 빈 본문 → JSON 파싱 에러 방지
+      const j = JSON.parse(text);
+      for (const d of (j.Data || [])) {
+        out.push({ supplier: 'EK', code: d.Bianhao, meters: numFrom(d.Canshu11), maxRollM: numFrom(d.Canshu12), transitM: numFrom(d.Canshu13) });
+      }
+    } catch { /* 이 검색어 실패 시 스킵(다른 검색어·공급처는 유지) */ }
   }));
   return out;
 }

@@ -30,6 +30,7 @@ export async function check(slugs = [], env = process.env) {
   const { token, cid } = await login(env);
   const out = [];
   await Promise.all(slugs.map(async (s) => {
+   try {
     const slug = String(s).toLowerCase().trim().replace(/\s+/g, '-');
     const r = await fetch(`${API}/articles/${encodeURIComponent(slug)}/colorstock`, { headers: baseH(token, cid) });
     if (!r.ok) return;
@@ -44,6 +45,7 @@ export async function check(slugs = [], env = process.env) {
         chinaM: c.stockLevelInChina?.totalStock?.value || 0,
       });
     }
+   } catch { /* 이 제품 실패 시 스킵 */ }
   }));
   return out;
 }
