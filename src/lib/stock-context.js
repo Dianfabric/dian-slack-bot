@@ -13,8 +13,10 @@ const SYMPHONY_PRODUCTS = new Set([
 
 // 원단 코드/제품명 후보 추출 (영문+숫자, 3자 이상). 예: LD1906P, KOSHER, 83100, Arctic, tivoli-performance
 function extractTokens(msg) {
-  const m = msg.match(/[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/g) || [];
-  return [...new Set(m.filter((t) => t.length >= 3 && /[A-Za-z0-9]/.test(t) && !/^\d{1,2}$/.test(t)))];
+  // 색상번호(#01·#900) 제거 — 검색 대상은 원단코드뿐. 안 그러면 "900"이 엉뚱한 코드에 매칭됨.
+  const cleaned = String(msg).replace(/#\s*\w+/g, ' ');
+  const m = cleaned.match(/[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/g) || [];
+  return [...new Set(m.filter((t) => t.length >= 3 && !/^\d{1,2}$/.test(t)))];
 }
 
 async function lookupSupplier(token) {
@@ -42,40 +44,32 @@ export async function buildStockContext(userMessage = '') {
   const tokens = extractTokens(msg);
   if (!tokens.length) return '';
 
+  // Supabase 공급처 라벨은 충돌·오등록이 많아(BOHO가 EK로 잘못 등록 등) 라우팅에 신뢰 불가.
+  // → 모든 원단코드를 4곳에 동시 조회. 실제 재고 있는 곳이 정답. 여러 곳이면 AI가 브랜드 구분(안전).
   const grouped = { RICKY: [], EK: [], QBH: [], SYMPHONY: [] };
-  const noApi = [];
-  await Promise.all(tokens.map(async (t) => {
+  for (const t of tokens) {
     const low = t.toLowerCase();
-    if (SYMPHONY_PRODUCTS.has(low)) { grouped.SYMPHONY.push(low); return; }
-    const sup = await lookupSupplier(t);
-    const S = (sup || '').toUpperCase();
-    if (S === 'EK' || S === 'EK UNIQUE') { grouped.EK.push(t); return; }
-    if (S === 'RICKY') { grouped.RICKY.push(t); return; }
-    if (S === 'QBH') { grouped.QBH.push(t); return; }
-    if (S && S !== 'UNKNOWN') { noApi.push(`${t}=${sup}`); return; } // 실시간 미지원 공급처(YINUO·HENGLI 등)
-    // 공급처 불명(UNKNOWN/미등록 ~3500건) → API로 자동 탐색. 카탈로그에 있는 곳만 응답.
-    if (maybeSymphony(low)) { grouped.SYMPHONY.push(low); return; } // 영문 제품명 → Symphony
-    grouped.RICKY.push(t);  // RICKY 무인증(부담 적음)
-    grouped.QBH.push(t);    // QBH (G####·AD-#### 등 중국코드)
-  }));
+    if (SYMPHONY_STOPWORDS.has(low)) continue; // 노이즈 영단어 제외
+    grouped.RICKY.push(t);
+    grouped.EK.push(t);
+    grouped.QBH.push(t);
+    grouped.SYMPHONY.push(low);
+  }
 
   const hasAny = Object.values(grouped).some((a) => a.length);
-  if (!hasAny && !noApi.length) return '';
+  if (!hasAny) return '';
 
-  let ctx = '';
-  if (hasAny) {
-    const { items, errors } = await checkAll(grouped);
-    if (items.length) {
-      ctx += '\n[해외 공급처 실시간 재고] (길이는 야드Y 기준, 괄호 안은 원본 미터M)\n';
-      for (const sup of NAMES) {
-        const g = items.filter((it) => it.supplier === sup);
-        if (!g.length) continue;
-        ctx += `### ${sup}\n` + g.map(fmtItem).join('\n') + '\n';
-      }
-      ctx += '※ 재고 안내는 야드(Y) 기준으로. 품절(0)·입고중 명확히. 미터(M)는 참고용.\n';
-      if (errors.length) ctx += '(일부 조회 실패: ' + errors.join(', ') + ')\n';
-    }
+  const { items, errors } = await checkAll(grouped);
+  if (!items.length) {
+    return errors.length ? `\n[해외 재고조회 일부 실패: ${errors.join(', ')}]\n` : '';
   }
-  if (noApi.length) ctx += `\n[참고] 실시간 재고 API 미지원 공급처(국내재고/수동 확인 필요): ${noApi.join(', ')}\n`;
+  let ctx = '\n[해외 공급처 실시간 재고] (길이는 야드Y 기준, 괄호 안은 원본 미터M)\n';
+  const found = NAMES.filter((sup) => items.some((it) => it.supplier === sup));
+  for (const sup of found) {
+    ctx += `### ${sup}\n` + items.filter((it) => it.supplier === sup).map(fmtItem).join('\n') + '\n';
+  }
+  ctx += '※ 재고 안내는 야드(Y) 기준. 품절(0)·입고중 명확히. 미터(M)는 참고용.\n';
+  if (found.length > 1) ctx += '⚠️ 같은 원단명이 여러 공급처에 있음 → 어느 브랜드인지 사용자에게 확인할 것(단가·원단 다름).\n';
+  if (errors.length) ctx += `(일부 공급처 조회 실패: ${errors.join(', ')})\n`;
   return ctx;
 }
