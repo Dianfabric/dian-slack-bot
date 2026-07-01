@@ -24,7 +24,7 @@ export function verifySlackRequest(signingSecret, headers, body) {
   });
 }
 
-export async function sendSlackMessage(channel, text, blocks = null) {
+export async function sendSlackMessage(channel, text, blocks = null, thread_ts = null) {
   const MAX_LENGTH = 3900;
   let safeText = text;
   if (text && text.length > MAX_LENGTH) {
@@ -33,6 +33,7 @@ export async function sendSlackMessage(channel, text, blocks = null) {
 
   const payload = { channel, text: safeText };
   if (blocks) payload.blocks = blocks;
+  if (thread_ts) payload.thread_ts = thread_ts; // 스레드 안에서 답변
 
   console.log('[Slack] Sending message to channel:', channel, '| text length:', safeText.length);
 
@@ -59,9 +60,9 @@ export async function sendSlackMessage(channel, text, blocks = null) {
 /**
  * 질문과 답변을 함께 포맷하여 채널에 전송
  */
-export async function sendBotReply(channel, question, answer) {
+export async function sendBotReply(channel, question, answer, thread_ts = null) {
   const formatted = `> 💬 *${question}*\n\n${answer}`;
-  return sendSlackMessage(channel, formatted);
+  return sendSlackMessage(channel, formatted, null, thread_ts);
 }
 
 /**

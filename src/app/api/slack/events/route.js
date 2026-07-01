@@ -75,6 +75,8 @@ export async function POST(request) {
 async function handleMessage(event) {
   const userMessage = event.text.replace(/<@[A-Z0-9]+>/g, '').trim();
   const channel = event.channel;
+  // 이미 스레드면 그 스레드에, 아니면 이 메시지를 루트로 스레드 답변
+  const threadTs = event.thread_ts || event.ts;
 
   if (!userMessage) return;
 
@@ -117,9 +119,9 @@ async function handleMessage(event) {
 
     const answer = await askDianBot(userMessage, context);
     console.log('[Event] AI response length:', answer.length);
-    await sendBotReply(channel, userMessage, answer);
+    await sendBotReply(channel, userMessage, answer, threadTs);
   } catch (error) {
     console.error('[Event] Error:', error.message, error.stack);
-    await sendSlackMessage(channel, '죄송합니다. 요청을 처리하는 중 오류가 발생했습니다.');
+    await sendSlackMessage(channel, '죄송합니다. 요청을 처리하는 중 오류가 발생했습니다.', null, threadTs);
   }
 }

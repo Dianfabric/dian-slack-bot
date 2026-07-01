@@ -24,15 +24,23 @@ function extractTokens(msg) {
   )];
 }
 
-async function lookupSupplier(token) {
+// 단가(판매가/Y) 조회 — Supabase fabrics.price_per_yard (2025 TMS에서 동기화된 값).
+// 원단명(품명)으로 prefix 매칭. 재고와 별개로 병렬 조회.
+async function lookupPrices(tokens) {
   try {
-    const u = `${process.env.SUPABASE_URL}/rest/v1/fabrics?select=name,supplier&name=ilike.${encodeURIComponent(token + '%')}&limit=5`;
+    const orClause = tokens.map((t) => `name.ilike.${t.replace(/[(),*]/g, '')}*`).join(',');
+    const u = `${process.env.SUPABASE_URL}/rest/v1/fabrics?select=name,price_per_yard&or=(${encodeURIComponent(orClause)})&limit=100`;
     const r = await fetch(u, { headers: { apikey: process.env.SUPABASE_ANON_KEY, Authorization: `Bearer ${process.env.SUPABASE_ANON_KEY}` } });
-    if (!r.ok) return null;
+    if (!r.ok) return {};
     const rows = await r.json();
-    return rows.find((x) => x.supplier)?.supplier || null;
+    const map = {};
+    for (const t of tokens) {
+      const hit = rows.find((row) => row.price_per_yard != null && String(row.name).toUpperCase().startsWith(t.toUpperCase()));
+      if (hit) map[hit.name] = hit.price_per_yard;
+    }
+    return map;
   } catch {
-    return null;
+    return {};
   }
 }
 
@@ -64,7 +72,8 @@ export async function buildStockContext(userMessage = '') {
   const hasAny = Object.values(grouped).some((a) => a.length);
   if (!hasAny) return '';
 
-  const { items: rawItems, errors } = await checkAll(grouped);
+  // 재고(4곳 실시간) + 단가(Supabase) 병렬 조회
+  const [{ items: rawItems, errors }, prices] = await Promise.all([checkAll(grouped), lookupPrices(tokens)]);
   // 느슨한(prefix/fuzzy) 매칭 노이즈 제거 — 검색어가 실제로 코드에 포함된 것만.
   const up = tokens.map((t) => t.toUpperCase());
   const items = rawItems.filter((it) => up.some((tk) => String(it.code).toUpperCase().includes(tk)));
@@ -72,6 +81,8 @@ export async function buildStockContext(userMessage = '') {
     return errors.length ? `\n[해외 재고조회 일부 실패: ${errors.join(', ')}]\n` : '';
   }
   let ctx = '\n[해외 공급처 실시간 재고] (길이는 야드Y 기준, 괄호 안은 원본 미터M)\n';
+  const priceLine = Object.entries(prices).map(([n, p]) => `${n} ${Number(p).toLocaleString()}원/Y`).join(' · ');
+  if (priceLine) ctx += `[판매단가] ${priceLine}\n`;
   const found = NAMES.filter((sup) => items.some((it) => it.supplier === sup));
   for (const sup of found) {
     ctx += `### ${sup}\n` + items.filter((it) => it.supplier === sup).map(fmtItem).join('\n') + '\n';
