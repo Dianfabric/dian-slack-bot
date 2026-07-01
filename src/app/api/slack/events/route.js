@@ -114,7 +114,10 @@ async function handleMessage(event) {
       })),
     ]);
 
-    const context = history + stockCtx + sheetResults.join('');
+    // 해외 재고를 찾았으면(=원단 재고 질문) 무거운 구글시트 덤프는 Claude에 보내지 않음 → 토큰/비용 대폭 절감.
+    // (시트는 국내재고/주문/단가용. 해외 실시간재고 답변엔 불필요)
+    const context = history + stockCtx + (stockCtx ? '' : sheetResults.join(''));
+    if (stockCtx) console.log('[Event] overseas stock hit → skipping sheet dump');
     console.log('[Event] Context length:', context.length);
 
     const answer = await askDianBot(userMessage, context);
