@@ -14,12 +14,15 @@ const ALERT_CHANNEL = process.env.KAKAO_ALERT_CHANNEL_ID || process.env.DIANBOT_
 
 const RECEIPT_TEXT = '문의가 접수되었습니다 🙂\n담당자가 확인 후 곧 답변드리겠습니다.\n(영업시간: 평일 09:00~18:00)';
 
-// 문의 영구 기록 — [디안]재고현황 시트의 "카카오문의로그" 탭 (분석·매뉴얼화 재료)
+// 문의 영구 기록 — 전용 시트 "[디안] 카카오톡 문의 로그" (KAKAO_LOG_SHEET_ID)의 "문의로그" 탭.
+// 전용 시트 env 설정 전까지는 임시로 재고현황 시트의 카카오문의로그 탭 사용.
 async function logInquiry(userId, utterance, reply) {
-  if (!process.env.SHEET_ID_ORDERS) return;
+  const dedicated = !!process.env.KAKAO_LOG_SHEET_ID;
+  const sheetId = process.env.KAKAO_LOG_SHEET_ID || process.env.SHEET_ID_ORDERS;
+  if (!sheetId) return;
   const { appendToSheet } = await import('@/lib/sheets');
   const kst = new Date(Date.now() + 9 * 3600 * 1000).toISOString().replace('T', ' ').slice(0, 19);
-  await appendToSheet(process.env.SHEET_ID_ORDERS, '카카오문의로그!A:D', [
+  await appendToSheet(sheetId, `${dedicated ? '문의로그' : '카카오문의로그'}!A:D`, [
     [kst, String(userId || '').slice(-6), utterance, reply || ''],
   ]).catch((e) => console.error('[Kakao] log fail:', e.message));
 }
