@@ -4,10 +4,13 @@ import { verifySlackRequest, sendBotReply, sendSlackMessage, getChannelHistory, 
 import { askDianBot } from '@/lib/ai';
 import { getSheetTabs, readSheet } from '@/lib/sheets';
 import { buildStockContext } from '@/lib/stock-context';
+import { handleSecretaryDM } from '@/lib/secretary';
 
 export const maxDuration = 60;
 
 const DIANBOT_CHANNEL_ID = process.env.DIANBOT_CHANNEL_ID || '';
+// 비서 기능 허용 사용자 (콤마 구분 Slack user ID). 비어 있으면 모든 DM 허용.
+const SECRETARY_USER_IDS = (process.env.SECRETARY_USER_IDS || '').split(',').map(s => s.trim()).filter(Boolean);
 
 /**
  * 스프레드시트의 모든 탭 데이터를 자동으로 읽어오기
@@ -65,6 +68,15 @@ export async function POST(request) {
     // dianbot 채널에서의 일반 메시지 → 슬래시 없이 자동 응답
     if (event.type === 'message' && event.channel === DIANBOT_CHANNEL_ID) {
       waitUntil(handleMessage(event));
+      return NextResponse.json({ ok: true });
+    }
+
+    // DM → 개인 비서 모드 (업무 기록·이슈·할일을 세컨드 브레인 볼트에 기록)
+    if (event.type === 'message' && event.channel_type === 'im' && !event.subtype) {
+      if (SECRETARY_USER_IDS.length > 0 && !SECRETARY_USER_IDS.includes(event.user)) {
+        return NextResponse.json({ ok: true });
+      }
+      waitUntil(handleSecretaryDM(event));
       return NextResponse.json({ ok: true });
     }
   }

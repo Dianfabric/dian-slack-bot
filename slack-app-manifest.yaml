@@ -1,0 +1,54 @@
+display_information:
+  name: 디안봇
+  description: 디안 원단 업무 자동화 + 학동역 점심 추천 봇
+  background_color: "#2c2d30"
+features:
+  bot_user:
+    display_name: 디안봇
+    always_online: true
+  slash_commands:
+    - command: /디안
+      url: https://dian-slack-bot.vercel.app/api/slack/commands
+      description: 디안봇에게 무엇이든 물어보기
+      usage_hint: "[질문]"
+      should_escape: false
+    - command: /재고
+      url: https://dian-slack-bot.vercel.app/api/slack/commands
+      description: 원단 재고 조회
+      usage_hint: "[원단명]"
+      should_escape: false
+    - command: /주문
+      url: https://dian-slack-bot.vercel.app/api/slack/commands
+      description: 주문 내역 조회
+      usage_hint: "[검색어]"
+      should_escape: false
+    - command: /견적
+      url: https://dian-slack-bot.vercel.app/api/slack/commands
+      description: 견적 산출
+      usage_hint: "[원단 수량]"
+      should_escape: false
+    - command: /점심
+      url: https://dian-slack-bot.vercel.app/api/slack/commands
+      description: 학동역 700m 점심 무작위 추천
+      usage_hint: "[분류(선택): 한식/중식/일식 등]"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - commands
+      - app_mentions:read
+      - channels:history
+      - groups:history
+      - im:history
+      - users:read
+settings:
+  event_subscriptions:
+    request_url: https://dian-slack-bot.vercel.app/api/slack/events
+    bot_events:
+      - app_mention
+      - message.channels
+      - message.im
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
