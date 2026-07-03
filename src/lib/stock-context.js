@@ -55,7 +55,14 @@ export async function buildStockContext(userMessage = '') {
   const msg = String(userMessage);
   if (!STOCK_KW.some((k) => msg.toLowerCase().includes(k.toLowerCase()))) return '';
   const tokens = extractTokens(msg);
-  if (!tokens.length) return '';
+  if (!tokens.length) {
+    // 해외(중국) 재고 질문인데 원단코드가 없음 → 시트(미수금·주문 등)로 헛다리 짚지 말고 코드를 되묻게 지시.
+    // 국내 재고 질문(한글만)은 여기 안 걸리고 기존대로 시트 컨텍스트를 쓴다.
+    if (/중국|해외/.test(msg)) {
+      return '\n[해외 재고조회 안내] 사용자가 중국/해외 공급처 재고를 확인하려 하는데 메시지에 원단코드(품명)가 없다. "어떤 원단인지 품명(예: LD1906P, BOHO)을 알려주시면 실시간으로 조회해드릴게요"라고 짧게 되물어라. 미수금·주문·화물 등 다른 시트 데이터 얘기는 꺼내지 마라.\n';
+    }
+    return '';
+  }
 
   // Supabase 공급처 라벨은 충돌·오등록이 많아(BOHO가 EK로 잘못 등록 등) 라우팅에 신뢰 불가.
   // → 모든 원단코드를 4곳에 동시 조회. 실제 재고 있는 곳이 정답. 여러 곳이면 AI가 브랜드 구분(안전).
